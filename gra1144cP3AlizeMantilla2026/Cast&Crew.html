@@ -1,0 +1,537 @@
+<!doctype html>
+<html>
+<head>
+	<title>Cast&amp;Crew</title>
+	<style>
+		html {
+  scroll-behavior: smooth;
+}
+		body{
+			margin:0;
+			padding:0;
+			background:linear-gradient(to bottom, #4C741E, #B8CD2A) no-repeat center center fixed;
+			min-height: 100vh;
+			background-size: cover;
+		}
+			.wrapper{	
+				width:1024px;
+				margin:0 auto;
+				display:block;
+				background-color:#436A33;
+		}
+					header{
+						height:100px;
+						position: sticky; 
+    					top: 0;          
+    					z-index: 1000;    
+    					background-color: #436A33;
+		}
+								.navbar{
+									background-color:#D98D30;
+									color:#FFFFFF;
+		}
+								.nav-links{
+									margin:0;
+									padding:0;
+									color: #FFFFFF;
+		}
+								.Nav-bar{
+									color:#FFFFFF;
+									display:inline-block;
+									padding:8px;
+									font-size:18px;
+									font-family: "Lobster";
+		}
+								.Nav-bar:hover{
+									color: #E7B366;
+									background-color: #7AA217;
+									transform: scale(1.1);
+									box-shadow: 0 0 15px #B8CD2A, 0 0 30px #4C741E;
+									border-radius: 5px; 
+									cursor: pointer;
+									transition: all 0.3s ease; 
+								}
+								.Nav-bar a {
+									color: #1a330d; /* Your requested dark green */
+									text-decoration: none;
+									display: block;
+									padding: 8px;
+									transition: all 0.3s ease;
+								}
+								.Nav-bar:hover a {
+									color: #FFFFFF;
+								}
+		footer{
+			display:inline-flex;
+			font-size:12px;
+			font-family: "Lobster";
+			padding:16px;
+			color:#FF9C00;
+			background-color:#2E611D;
+		}
+			.Movie_rate{
+			width:auto;
+			height: 56px;
+			padding-right:20px;
+		}
+		h1{
+			margin:0;
+			padding:16px;
+			background-color: #286B11;
+		}
+			h1,h2,h3,h4{margin:0;
+						padding-left:15px;
+						color:#EBA642;
+						font-family: "Lobster";
+						font-weight: 400;
+						font-style: normal;}
+					#backToTop {
+					  display: none; 
+					  position: fixed; 
+					  bottom: 20px; 
+					  right: 30px; 
+					  z-index: 99; 
+					  border: none; 
+					  outline: none; 
+					  background-color: #D98D30; 
+					  color: white; 
+					  cursor: pointer; 
+					  padding: 15px; 
+					  border-radius: 50%; 
+					  font-size: 20px;
+					  width: 50px;
+					  height: 50px;
+					  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+					  transition: 0.3s;
+					}
+
+					#backToTop:hover {
+					  background-color: #436A33;
+					  transform: scale(1.1);
+					}	
+		.Cast-Crew{
+			color:#F8BB54;
+			font-family: "Lobster";
+		}
+	.character-section { 
+		display: flex; 
+		justify-content: center; 
+		gap: 30px; 
+		margin: 40px;
+		}
+.profile img { 
+	width: 120px;
+	height: 120px;
+	border-radius: 50%; 
+	border: 5px solid #BBBC49; 
+	cursor: pointer; 
+	transition: 0.3s;
+		}
+.profile img:hover {
+	transform: translateY(-10px); 
+	border-color: #F6D4A1;
+		}
+#quote-display {
+	text-align: center; 
+	font-style: italic;
+	font-size: 24px;
+	color: #EBA642;
+	min-height: 50px; }
+	</style>
+</head>
+<body>
+	<wrapper>
+		<header>
+				<nav class="navbar">
+  <ul class="nav-links">
+    <li class="Nav-bar"><a href="index.html">Home</a></li>
+    <li class="Nav-bar"><a href="Features.html">Features</a></li>
+    <li class="Nav-bar"><a href="Videos.html">Trailers &amp; Videos</a></li>
+    <li class="Nav-bar"><a href="Actions.html">Actions</a></li>
+	<li class="Nav-bar"><a href="Cast&Crew.html">Cast &amp;Crew</a></li>
+	<li class="Nav-bar"><a href="Order.html">More movies</a></li>
+	<li class="Nav-bar"><a href="Social_Media.html">Social Media</a></li>
+	<li class="Nav-bar"><a href="FAQs.html">FAQs</a></li>
+  </ul>
+</nav>
+		</header>
+			<h1 class="all-type"><strong>Cast &amp; Crew</strong></h1>
+	<div class="character-section">
+    <div class="profile" onclick="showQuote('Donkey', 'And in the morning... I\'m making waffles!')">
+        <img src="donkey_circle.jpg" alt="Donkey">
+        <p>Donkey</p>
+    </div>
+    <div class="profile" onclick="showQuote('Puss', 'Pray for mercy from Puss... in Boots!')">
+        <img src="puss_circle.jpg" alt="Puss">
+        <p>Puss in Boots</p>
+    </div>
+    <div id="quote-display">Click a character for a quote!</div>
+</div>	
+		
+		<div class="Cast-Crew">
+<div class="Director">
+		<section>
+			<h2>Directors</h2>
+		<ul>
+		<li>Andrew Adamson</li>
+		<li>Kelly Asbury</li>
+		<li>Conrad Vernon</li>
+		</ul>
+		</section>
+</div>
+<div class="Writers">
+	<section>
+			<h2>Writers</h2>
+		<ul>
+		<li>William Steig</li>
+		<li>Andrew Adamson</li>
+		<li>Joe Stillman</li>
+		<li>J. David Stem</li>
+		<li>David N. Weiss</li>
+		<li>Cody Cameron</li>
+		<li>Walt Dohrn</li>
+		<li>Chris Miller</li>
+		<li>David P. Smith</li>
+		<li>Conrad Vernon</li>
+		</ul>
+	</section>
+</div>
+<div>
+	<h2>Cast</h2>
+<section class="Actors_Names">
+		<ul>
+			<li>Mike Myers</li>
+			<li>Eddie Murphy</li>
+			<li>Cameron Diaz</li>
+			<li>Julie Andrews</li>
+			<li>Antonio Banderas</li>
+			<li>John Cleese</li>
+			<li>Rupert Everett</li>
+			<li>Jennifer Saunders</li>
+			<li>Aron Warner</li>
+			<li>Kelly Asbury</li>
+			<li>Cody Cameron</li>
+			<li>Conrad Vernon</li>
+			<li>Christopher Knights</li>
+			<li>David P. Smith</li>
+			<li>Mark Moseley</li>
+			<li>Kelly Cooney Cilella</li>
+			<li>Wendy Bilanski</li>
+			<li>Larry King</li>
+			<li>Guillaume Aretos</li>
+			<li>Chris Miller</li>
+			<li>Latifa Ouaou</li>
+			<li>Alina Phelan</li>
+			<li>Erika Thomas</li>
+			<li>Joan Rivers</li>
+			<li>Andrew Adamson</li>
+			<li>Jonathan Ross</li>
+			<li>Kate Thornton</li>
+</ul>
+	</section>
+	<section class="Charaters">
+		<h2>Charaters</h2>
+		<ul>
+		<li>Shrek(voice)</li>
+		<li>Donkey(voice)</li>
+		<li>Princess Fiona(voice)</li>
+		<li>Queen(voice)</li>
+		<li>Puss In Boots(voice)</li>
+		<li>King(voice)</li>
+		<li>Prince Charming(voice)</li>
+		<li>Fairy Godmother(voice)</li>
+		<li>Wolf(voice)</li>
+		<li>Page/Elf/Nobleman/Nobleman's Son(voice)</li>
+		<li>Pinocchio/Three Pigs(voice)</li>
+		<li>Gingerbread Man/Cedric/Announcer/Muffin Man/Mongo(voice)</li>
+		<li>Blind Mouse(voice)</li>
+		<li>Herald/Man with Box(voice)</li>
+		<li>Mirror/Dresser(voice)</li>
+		<li>Fast Food Clerk(voice) (as Kelly Cooney)</li>
+		<li>Bar Frog(voice)</li>
+		<li>Ugly Stepsister(voice)</li>
+		<li>Receptionist(voice)</li>
+		<li>Humphries/Magic Mirror(voice)</li>
+		<li>Doll/Jill(voice)</li>
+		<li>Maiden #1/Generic Female #2(voice)</li>
+		<li>Maiden #2(voice)</li>
+		<li>Joan Rivers(voice)</li>
+		<li>Captain of the Guards(voice)</li>
+		<li>Ugly Stepsister (UK Release)(uncredited)</li>
+		<li>Kate Thornton (UK Release)(uncredited)</li>	
+		</ul>
+	</section>
+</div>
+<div class="Producer">
+	<h2>Producer</h2>	
+		<ul>
+			<li>Jeffrey Katzenberg</li>
+			<li>David Lipman</li>
+			<li>Aron Warner</li>
+			<li>John H. Williams</li>
+		</ul>
+</div>
+<div class="Composer">
+	<h2>Composer</h2>
+		<ul>
+			<li>Harry Gregson-Williams</li>
+		</ul>
+</div>
+<div class="Editor">
+	<h2>Editors</h2>
+		<ul>
+			<li>Michael Andrews</li>
+			<li>Sim Evan-Jones</li>
+		</ul>
+</div>		
+<div class="Casting Director">
+	<h2>Casting Director</h2>
+		<ul>
+			<li>Leslee Feldman</li>
+		</ul>
+</div>
+<div class="Production Designer">
+	<h2>Production Designer</h2>
+		<ul>
+			<li></li>
+		</ul>
+</div>
+<div class="Art Director">
+	<h2>Art Director</h2>
+		<ul>
+			<li>Steve Pilcher</li>
+		</ul>
+</div>
+<div class="Costume Designer">
+	<h2>Costume Designer</h2>
+		<ul>
+			<li>Isis Mussenden</li>
+		</ul>
+</div>
+<div class="Production Management">
+	<h2>Production Management</h2>
+		<ul>
+			<li>Pawel Araszkiewicz</li>
+			<li>Andrew Birch</li>
+			<li>Denise Nolan Cascino</li>
+			<li>Kristen D. Chidel</li>
+			<li>Tony Cosanella</li>
+			<li>Barbara Ford</li>
+			<li>Carol Norton</li>
+			<li>Thompson O'Sullivan</li>
+			<li>Miguel Ángel Poveda</li>
+			<li>Triva von Klark</li>
+			<li>Darci Zalvin</li>
+		</ul>
+</div>
+<div class="Art Department">
+	<h2>Art Department</h2>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+</div>
+<div class="Sound Department">
+	<h2>Sound Department</h2>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+</div>
+<div class="Special Effects">
+	<h2>Special Effects</h2>
+		<ul>
+			<li>Dennis Gordon</li>
+			<li>Tim Lawrence</li>
+			<li>Charles Rivera</li>
+		</ul>
+</div>
+<div class="Visual Effects">
+	<h2>Visual Effects</h2>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+</div>
+<div class="Camera and Electrical">
+		<h2>Camera and Electrical</h2>
+		<ul>
+			<li>Nelson Lee</li>
+		</ul>
+</div>
+<div class="Animation Department">
+	<h2>Animation Department</h2>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+</div>		
+<div class="Casting Department">
+		<h2>Casting Department</h2>
+		<ul>
+			<li>Celeste Leger(casting assistant)</li>
+			<li>Mickie McGowan(adr voice casting)</li>
+			<li>Christi Soper(casting associate)</li>
+			<li>Barbara Harris(adr voice casting (uncredited))</li>
+		</ul>
+</div>
+<div class="Cast & Crew Highlights">
+	<h2>Cast &amp; Crew Highlights</h2>
+</div>
+</div>		
+<button onclick="topFunction()" id="backToTop" title="Go to top">↑</button>
+	<footer>
+		<div class="rating"> 
+			<img src="PG_LOGO.jpeg" class="Movie_rate" alt="It the rating of the movie">
+		</div>
+			<p>&copy; 2026, Alize Mantilla. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+		</footer>
+	</wrapper>
+<script>
+		let mybutton = document.getElementById("backToTop");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' 
+  });
+}
+	function showQuote(name, quote) {
+    document.getElementById('quote-display').innerHTML = `<strong>${name}:</strong> "${quote}"`;
+}
+</script>
+</body>
+</html>
