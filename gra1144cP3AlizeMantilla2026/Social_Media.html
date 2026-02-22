@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+<head>
+<title>Social Media &amp; Share links</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&family=Lobster&display=swap" rel="stylesheet">
+	<style>
+	html {
+  scroll-behavior: smooth;
+}
+		body{
+			margin:0;
+			padding:0;
+			background:linear-gradient(to bottom, #4C741E, #B8CD2A) no-repeat center center fixed;
+			min-height: 100vh;
+			background-size: cover;
+		}
+		main {
+			flex: 1;}
+		.wrapper{	
+			max-width: 1366px; 
+			width: 95%;
+			min-height: 1024px;
+			margin:0 auto;
+			display:block;
+			background-color:#436A33;
+		}
+		header{
+			height:100px;
+			position: sticky; 
+    		top: 0;          
+    		z-index: 1000;    
+    		background-color: #436A33;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+		}
+		h1{
+			margin:0;
+			padding:16px;
+			background-color: #286B11;
+			color: #EBA642;
+        	font-family: "Lobster";
+		}
+		.navbar{
+			background-color:#D98D30;
+		}
+		.nav-links{
+			margin:0;
+			padding:0;
+			display: flex;
+       		 justify-content: center;
+        	flex-wrap: wrap;
+        	list-style: none;
+		}
+		.Nav-bar{
+			font-family: "Lobster";
+			transition: all 0.3s ease;
+		}
+		.Nav-bar:hover{
+			background-color: #7AA217;
+			transform: scale(1.1);
+			box-shadow: 0 0 15px #B8CD2A;
+			border-radius: 5px; 
+			cursor: pointer;
+			transition: all 0.3s ease; 
+		}
+		.Nav-bar a {
+			color: #1a330d; 
+			display: block;
+			width: 100%;
+    		height: 100%;
+			padding: 8px;
+		}
+		.Nav-bar:hover a {
+			color: #FFFFFF;
+		}
+   	
+		footer{
+			display:inline-flex;
+			font-size:12px;
+			font-family: "Lobster";
+			padding:16px;
+			color:#FF9C00;
+			background-color:#2E611D;
+		}
+			.Movie_rate{
+			width:auto;
+			height: 56px;
+			padding-right:20px;
+		}
+	h2,h3{
+			margin:0;
+			padding-left:15px;
+			color:#EBA642;
+			font-family: "Lobster";
+			font-weight: 400;
+			font-style: normal;}
+		#backToTop {
+			display: none; 
+			position: fixed; 
+			bottom: 20px; 
+			right: 30px; 
+			z-index: 99; 
+			border: none; 
+			outline: none; 
+			background-color: #D98D30; 
+			color: white; 
+			cursor: pointer; 
+			padding: 15px; 
+			border-radius: 50%; 
+			font-size: 20px;
+			width: 50px;
+			height: 50px;
+			box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+			transition: 0.3s;
+		}
+
+		#backToTop:hover {
+			background-color: #436A33;
+			transform: scale(1.1);
+		}	
+		.watch-text{
+			color:#F8BB54;
+			font-family: "Lobster";
+			margin-top: 20px; 
+   			scroll-margin-top: 120px;
+			padding: 20px;
+		}
+.streaming-sidebar img { 
+	width: 40px; 
+	margin: 15px 0; 
+	display: block;   
+	transition: 0.3s; 
+	filter: grayscale(1) invert(1); 
+	filter: drop-shadow(0 0 2px white);
+		}
+.streaming-sidebar img:hover { 
+	filter: grayscale(0) invert(0); transform: scale(1.3); 
+		}
+    .streaming-sidebar {
+        position: fixed;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(46, 97, 29, 0.95);
+        padding: 15px;
+        border-radius: 15px;
+        border: 2px solid #F6D4A1;
+        z-index: 1100;
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    .streaming-sidebar p {
+		color: #F6D4A1; 
+		font-family: 'Lobster'; 
+		margin-bottom: 10px; 
+		font-size: 14px; }
+    .social-section {
+        padding: 40px;
+        text-align: center;
+        background: rgba(0,0,0,0.2);
+        margin: 20px;
+        border-radius: 15px;
+        border: 1px dashed #B8CD2A;
+    }
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 20px;
+    }
+    .social-btn {
+        font-size: 40px;
+        text-decoration: none;
+        transition: 0.4s;
+        display: inline-block;
+    }
+    .btn-fb:hover { 
+		color: #1877F2; 
+		text-shadow: 0 0 20px #1877F2; transform: translateY(-10px);
+	}
+    .btn-ig:hover { 
+		color: #E4405F; 
+		text-shadow: 0 0 20px #E4405F; transform: translateY(-10px); 
+		}
+    .btn-yt:hover { 
+		color: #FF0000; 
+		text-shadow: 0 0 20px #FF0000; transform: translateY(-10px); 
+		}
+    ul { 
+		color: white; 
+		font-family: sans-serif; 
+		line-height: 1.8; 
+		}
+	</style>
+</head>
+
+<body>
+		<div class="wrapper"> 
+			<header>
+            <h1><strong>FAR, FAR, AWAY NEWS!!!</strong></h1>
+            <nav class="navbar">
+  <ul class="nav-links">
+    <li class="Nav-bar"><a href="index.html">Home</a></li>
+    <li class="Nav-bar"><a href="Features.html">Features</a></li>
+    <li class="Nav-bar"><a href="Videos.html">Trailers &amp; Videos</a></li>
+    <li class="Nav-bar"><a href="Fiona's Diary.html">Fiona's Diary</a></li>
+	<li class="Nav-bar"><a href="Cast&Crew.html">Cast &amp;Crew</a></li>
+	<li class="Nav-bar"><a href="Order.html">More movies</a></li>
+	<li class="Nav-bar"><a href="Social_Media.html">Social</a></li>
+	<li class="Nav-bar"><a href="FAQs.html">FAQs</a></li>
+	  <li class="Nav-bar"><a href="Buy_Now.html">Buy Now!!!</a></li>
+  </ul>
+</nav>
+        </header>
+
+        <div class="watch-text">
+            <h2>Where to Watch Shrek 2</h2>
+            <p>To watch Shrek 2 right now (early 2026),  your best bet depends on which subscriptions you already have!</p>  
+			<p>Check out the <a href="https://www.dreamworks.com/movies/shrek-2" style="color:#B8CD2A;">Official DreamWorks Site</a> for more!</p>
+            
+            <section>
+                <h3> Streaming Now</h3>
+                <ul>
+                    <li><strong>Peacock:</strong> The official home of Shrek.</li>
+                    <li><strong>Disney+:</strong> Available in select regions like the UK.</li>
+					<li><strong>Netflix: </strong>Availability on Netflix varies by month due to licensing deals. It recently left Netflix in late 2025 but occasionally rotates back in.</li>
+                </ul>
+            </section>
+			<section>
+				<h3> Rent or Buy (Digital)</h3>
+	<p>If you don't have the apps above, you can find it on all major digital storefronts for about $3.99:</p>
+		<ul>
+			<li>Amazon Prime Video</li>
+
+			<li>Apple TV / iTunes</li>
+
+			<li>Google Play Movies</li>
+
+			<li>YouTube Movies</li>
+		</ul>
+			</section>
+        </div>
+        <div class="social-section">
+            <h2>Join the Ogre Resistance</h2>
+            <p>Follow Far Far Away on social media for royal updates!</p>
+            <div class="social-icons">
+                <a href="#" class="social-btn btn-fb">??</a>
+                <a href="#" class="social-btn btn-ig">??</a>
+                <a href="#" class="social-btn btn-yt">??</a>
+            </div>
+        </div>
+	<div class="streaming-sidebar">
+    <p>Watch On:</p>
+    <a href="https://www.netflix.com/title/60020686" title="Netflix"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix"></a>
+    <a href="https://www.peacocktv.com/stream-movies/shrek-2" title="Peacock"><img src="pealook.png" alt="Peacock"></a>
+    <a href="https://www.hulu.com/hub/tv/collections/5996" title="Hulu"><img src="hulu.jpg" alt="Hulu"></a>
+</div>
+	</div>
+<button onclick="topFunction()" id="backToTop" title="Go to top">?</button>
+	<footer>
+		<div class="rating"> 
+			<img src="Artboard_1.png" class="Movie_rate" alt="It the rating of the movie">
+		</div>
+			<p>&copy; 2026, Alize Mantilla. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+		</footer>
+<script>
+		let mybutton = document.getElementById("backToTop");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' 
+  });
+}
+document.querySelectorAll('.Nav-bar a').forEach(link => {
+    if (link.href === window.location.href) {
+        link.parentElement.style.backgroundColor = "#7AA217";
+        link.parentElement.style.boxShadow = "0 0 10px #B8CD2A";
+        link.style.color = "#FFFFFF";
+    }
+});
+</script>
+</body>
+</html>
