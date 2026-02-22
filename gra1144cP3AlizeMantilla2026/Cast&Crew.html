@@ -1,0 +1,1154 @@
+<!doctype html>
+<html>
+<head>
+	<title>Cast&amp;Crew</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&family=Lobster&display=swap" rel="stylesheet">
+	<style>
+	html {
+  scroll-behavior: smooth;
+}
+		body{
+			margin:0;
+			padding:0;
+			background:linear-gradient(to bottom, #4C741E, #B8CD2A) no-repeat center center fixed;
+			min-height: 100vh;
+			background-size: cover;
+		}
+		main {
+			flex: 1;}
+		.wrapper{	
+			max-width: 1366px; 
+			width:90%;
+			min-height: 1024px;
+			margin:0 auto;
+			display:block;
+			background-color:#286B11;
+		}
+		header{
+			height:100px;
+			position: sticky; 
+    		top: 0;          
+    		z-index: 1000;    
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+		}
+		h1{
+			margin:0;
+			padding:16px;
+			background-color: #286B11;
+			color: #EBA642;
+        	font-family: "Lobster";
+		}
+		h2{
+			color: #7AA217; 
+			text-align: center;
+		}
+		.scroll-container {
+			width: 85%;
+			background-color: #fdf5e6; 
+			padding: 30px;
+			border: 10px solid #2e611d;
+			border-radius: 15px;
+			position: relative;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+			margin: 40px auto 80px;
+		}
+		.scroll-container::before { 
+			content: "🌿"; 
+			position: absolute; 
+			top: -30px; left: -30px; 
+			font-size: 50px;
+		}
+		.scroll-container::after { 
+			content: "🌱"; 
+			position: absolute; 
+			bottom: -25px; 
+			right: -25px; 
+			font-size: 45px; 
+		}
+		.scroll-container ul{
+			gap: 15px;
+			font-family: 'Edu SA Hand', cursive;
+			color: #452D20;
+			list-style-type: "✨ ";
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			padding: 0;
+    		list-style-position: inside;
+		}
+		.full-width {
+    grid-column: span 2;
+    list-style-type: none; 
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+	.navbar{
+			background-color:#D98D30;
+		}
+		.nav-links{
+			margin:0;
+			padding:0;
+			display: flex;
+       		 justify-content: center;
+        	flex-wrap: wrap;
+        	list-style: none;
+		}
+		.Nav-bar{
+			font-family: "Lobster";
+			transition: all 0.3s ease;
+			padding:10px;
+			font-size:18px;
+		}
+		.Nav-bar:hover{
+			background-color: #7AA217;
+			transform: scale(1.1);
+			box-shadow: 0 0 15px #B8CD2A;
+			border-radius: 5px; 
+			cursor: pointer;
+		}
+		.Nav-bar a {
+			color: #1a330d; 
+			display: block;
+			width: 100%;
+    		height: 100%;
+			padding: 8px;
+		}
+		.Nav-bar:hover a {
+			color: #FFFFFF;
+		}
+		footer{
+			display:inline-flex;
+			font-size:12px;
+			font-family: "Lobster";
+			padding:16px;
+			color:#FF9C00;
+			background-color:#2E611D;
+		}
+			.Movie_rate{
+			width:auto;
+			height: 56px;
+			padding-right:20px;
+		}
+		#backToTop {
+			display: none; 
+			position: fixed; 
+			bottom: 20px; 
+			right: 30px; 
+			z-index: 99; 
+			border: none; 
+			outline: none; 
+			background-color: #D98D30; 
+			color: white; 
+			cursor: pointer; 
+			padding: 15px; 
+			border-radius: 50%; 
+			font-size: 20px;
+			width: 50px;
+			height: 50px;
+			box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+			transition: 0.3s;
+		}
+
+		#backToTop:hover {
+			background-color: #436A33;
+			transform: scale(1.1);
+		}	
+		.Cast-Crew{
+			color:#F8BB54;
+			font-family: "Lobster";
+			margin-top: 20px; 
+   			scroll-margin-top: 120px;
+		}
+		.background_image_chara{
+			background-image: url('Far_Far_Away.jpg'); 
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			padding: 60px 20px;
+			border: 8px double #D98D30;
+			border-radius: 20px;
+			box-shadow: inset 0 0 100px rgba(0,0,0,0.6), 0 10px 30px rgba(0,0,0,0.5);
+			text-align: center;
+		}
+		.character-section { 
+			display: flex; 
+			flex-wrap: wrap; 
+			justify-content: center; 
+			gap: 20px; 
+			margin: 40px auto;
+			width: 90%;
+		}
+		.profile {
+			text-align: center;
+			width: 140px; 
+		}
+		.profile img { 
+			width: 110px;
+			height: 110px;
+			border-radius: 50%; 
+			border: 6px solid #5d3a1a;
+			background-color: #DDC6A4;
+			cursor: pointer; 
+			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+		}
+		.profile img:hover {
+			transform: scale(1.1) rotate(5deg); 
+			border-color: #B8CD2A; 
+			box-shadow: 0 0 20px #B8CD2A; 
+		}
+		.profile p {
+			color: #fdf5e6;
+			font-family: 'Lobster', cursive;
+			margin-top: 10px;
+			text-shadow: 2px 2px 4px #000;
+		}
+		#quote-display {
+			text-align: center; 
+			font-family: 'Edu SA Hand', cursive;
+			font-size: 26px;
+			color: #452D20;
+			max-width: 700px;
+			margin: 20px auto;
+			padding: 25px;
+			background-color: #D98D30; 
+			border: 5px solid #5d3a1a;
+			border-radius: 10px;
+			box-shadow: inset 0 0 15px rgba(0,0,0,0.3);
+			min-height: 60px;
+		}
+ 		.wax-seal {
+            position: absolute;
+            bottom: -45px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90px;
+            height: 90px;
+            background: radial-gradient(circle, #b31d1d 60%, #8b1515 100%);
+            border-radius: 50%;
+            border: 3px solid #721212;
+            box-shadow: 2px 5px 15px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+        }
+        .wax-seal::after { 
+			content: "S";
+			font-family: 'Lobster'; 
+			color: #ffd700; 
+			font-size: 45px;
+			text-shadow: 2px 2px 4px black; 
+		}
+		.all-type {
+			text-align: center;
+			font-size: 60px; 
+			color: #F8BB54;
+			text-shadow: 3px 3px 0px #452D20, 5px 5px 15px rgba(0,0,0,0.8);
+			background: rgba(40, 107, 17, 0.7); 
+			display: inline-block;
+			padding: 10px 40px;
+			border-radius: 50px;
+			border: 3px solid #D98D30;
+			margin: 20px auto;
+			width: fit-content;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			 <h1><strong>FAR, FAR, AWAY NEW'S!!!</strong></h1>
+				<nav class="navbar">
+  <ul class="nav-links">
+    <li class="Nav-bar"><a href="index.html">Home</a></li>
+    <li class="Nav-bar"><a href="Features.html">Features</a></li>
+    <li class="Nav-bar"><a href="Videos.html">Trailers &amp; Videos</a></li>
+    <li class="Nav-bar"><a href="Fiona's Diary.html">Fiona's Diary</a></li>
+	<li class="Nav-bar"><a href="Order.html">More movies</a></li>
+	<li class="Nav-bar"><a href="Social_Media.html">Social</a></li>
+	<li class="Nav-bar"><a href="FAQs.html">FAQs</a></li>
+  </ul>
+</nav>
+		</header>
+		<div class="background_image_chara">
+			<h2 class="all-type"><strong>Cast &amp; Crew</strong></h2>	
+		<div class="character-section">
+		<div class="profile" onclick="showQuote('Shrek', 'Thank you, gentlemen. Someday I will repay you, unless of course I can\'t find you, or if I forget.')">
+        <img src="shrek.png" alt="Shrek">
+        <p>Shrek</p>
+    </div>
+	<div class="profile" onclick="showQuote('Princess Fiona', 'I want what any princess wants - to live happily ever after... with the *ogre* I married.')">
+        <img src="Princess_Fiona.png" alt="Princess Fiona">
+        <p>Princess Fiona</p>
+    </div>
+    <div class="profile" onclick="showQuote('Donkey', 'And in the morning... I\'m making waffles!')">
+        <img src="donkey - Copy (2).png" alt="Donkey">
+        <p>Donkey</p>
+    </div>
+    <div class="profile" onclick="showQuote('Puss', 'Pray for mercy from Puss... in Boots!')">
+        <img src="boots.png" alt="Puss">
+        <p>Puss in Boots</p>
+    </div>
+	<div class="profile" onclick="showQuote('King', 'Good! Now\'s our chance. Let\'s go back inside and pretend we\'re not home.')">
+        <img src="king - Copy.png" alt="King">
+        <p>King</p>
+    </div>
+		<div class="profile" onclick="showQuote('Queen', Well, he\'s no Prince Charming, but they do look...')">
+        <img src="queen.png" alt="Queen">
+        <p>Queen</p>
+    </div>
+		<div class="profile" onclick="showQuote('Fairy Godmother', 'He endured blistering winds and scorching deserts - he climbed the highest bloody room of the tallest bloody tower - and what does he find? Some gender-confused WOLF telling him that HIS princess is already married!')">
+        <img src="godmother.png" alt="Fairy Godmother">
+        <p>Fairy Godmother</p>
+    </div>
+
+	<div class="profile" onclick="showQuote('Ugly Stepsister', '[approaching Prince Charming] Hello, Gorgeous.')">
+        <img src="deva.png" alt="Ugly Stepsister">
+        <p>Ugly Stepsister</p>
+		</div>
+			</div>
+	
+    <div id="quote-display">Click a character for a quote!</div>
+</div>	
+		<div class="scroll-container">
+    <h2>📜 The Royal Cast</h2>
+    <ul>
+        <li>Mike Myers (Shrek)</li>
+        <li>Eddie Murphy (Donkey)</li>
+        <li>Cameron Diaz (Princess Fiona)</li>
+        <li>Julie Andrews (Queen Lillian)</li>
+        <li>Antonio Banderas (Puss in Boots)</li>
+        <li>John Cleese (King Harold)</li>
+        </ul>
+</div>
+
+<div class="scroll-container">
+    <h2>🛠️ The Kingdom's Crew</h2>
+	<ul> <li class="full-width"><strong>Directors:</strong></li> 
+		<li>Andrew Adamson</li>
+		<li>Kelly Asbury</li>
+		<li>Conrad Vernon</li>
+		<li class="full-width"><strong>Produced by:</strong></li>
+		<li>David Lipman</li>
+		<li>Aron Warner</li>
+		<li>John H. Williams</li>
+        </ul>
+	<div class="wax-seal"></div>
+</div>
+		<div class="scroll-container">
+    <h2 >📜 The Royal Scribes</h2>
+    <ul> <li class="full-width"><strong>Writers:</strong></li> 
+		<li>William Steig</li>
+		<li>Andrew Adamson</li>
+		<li> Joe Stillman</li>
+		<li>J. David Stem</li>
+		<li>David N. Weiss</li>
+		<li>Cody Cameron</li>
+		<li>Walt Dohrn</li>
+		<li>Chris Miller</li>
+		<li>David P. Smith</li>
+		<li> Conrad Vernon</li>
+        </ul>
+			<div class="wax-seal"></div>
+</div>
+		<div class="scroll-container">
+    <h2>📜 Voices of the Kingdom</h2>
+    <ul>
+        <li><strong>Mike Myers</strong></li> <li>Shrek</li>
+        <li><strong>Eddie Murphy</strong></li> <li>Donkey</li>
+        <li><strong>Cameron Diaz</strong></li> <li>Princess Fiona</li>
+        <li><strong>Julie Andrews</strong></li> <li>Queen Lillian</li>
+        <li><strong>Antonio Banderas</strong></li> <li>Puss In Boots</li>
+        <li><strong>John Cleese</strong></li> <li>King Harold</li>
+        <li><strong>Rupert Everett</strong></li> <li>Prince Charming</li>
+        <li><strong>Jennifer Saunders</strong></li> <li>Fairy Godmother</li>
+        <li><strong>Aron Warner</strong></li> <li>Wolf</li>
+        <li><strong>Kelly Asbury</strong></li> <li>Page / Elf</li>
+        <li><strong>Cody Cameron</strong></li> <li>Pinocchio / Three Pigs</li>
+        <li><strong>Conrad Vernon</strong></li> <li>Gingerbread Man / Mongo</li>
+        <li><strong>Christopher Knights</strong></li> <li>Blind Mouse</li>
+        <li><strong>David P. Smith</strong></li> <li>Herald</li>
+        <li><strong>Larry King</strong></li> <li>Ugly Stepsister</li>
+    </ul>
+    <div class="wax-seal"></div>
+</div>
+	<div class="scroll-container">
+    <h2>The Royal Overseers</h2>
+    <ul> <li class="full-width"><strong>Producer:</strong></li>
+       <li>Jeffrey Katzenberg</li>
+			<li>David Lipman</li>
+			<li>Aron Warner</li>
+			<li>John H. Williams</li>
+															 </ul>
+		<div class="wax-seal"></div>
+</div>
+<div class="scroll-container">
+    <h2>The Royal Minstrels</h2>
+    <ul> 
+		<li class="full-width"><strong>Composer:</strong>Harry Gregson-Williams</li>
+	</ul>
+	<div class="wax-seal"></div>
+</div>								
+<div class="scroll-container">
+    <h2>Cutters of the Quest</h2>
+    <ul> <li class="full-width"><strong>Editors:</strong>Michael Andrews, Sim Evan-Jones</li>
+															 </ul>
+	<div class="wax-seal"></div>
+</div>						
+<div class="scroll-container">
+    <h2>Caller of the Quest</h2>
+    <ul> <li class="full-width"><strong>Casting Director:</strong>Leslee Feldman</li>
+															 </ul>
+	<div class="wax-seal"></div>
+</div>																					 
+<div class="scroll-container">
+    <h2>The Royal Architect</h2>
+    <ul> <li class="full-width"><strong>Production Designer:</strong>Guillaume Aretos</li>
+															 </ul>
+	<div class="wax-seal"></div>
+</div>	
+<div class="scroll-container">
+    <h2>Master of the Royal Palette</h2>
+    <ul> <li class="full-width"><strong>Art Director:</strong>Steve Pilcher</li>
+															 </ul>
+	<div class="wax-seal"></div>
+</div>	
+<div class="scroll-container">
+    <h2>Weaver of Royal Raiment</h2>
+    <ul>
+		<li class="full-width"><strong>Costume Designer:</strong>Isis Mussenden</li>
+		
+															 </ul>
+	<div class="wax-seal"></div>
+</div>	
+<div class="scroll-container">
+    <h2>The King's Administrators</h2>
+    <ul>
+		<li class="full-width"><strong>Production Management:</strong></li>
+			<li>Pawel Araszkiewicz</li>
+			<li>Andrew Birch</li>
+			<li>Denise Nolan Cascino</li>
+			<li>Kristen D. Chidel</li>
+			<li>Tony Cosanella</li>
+			<li>Barbara Ford</li>
+			<li>Carol Norton</li>
+			<li>Thompson O'Sullivan</li>
+			<li>Miguel Ángel Poveda</li>
+			<li>Triva von Klark</li>
+			<li>Darci Zalvin</li>
+	</ul>
+	<div class="wax-seal"></div>
+</div>	
+<div class="scroll-container">
+    <h2>Designers of the Decree</h2>
+    <ul> 
+		<li class="full-width"><strong>Art Department</strong></li>
+			<li>Chris Aguirre</li>
+			<li>Yuri Bartoli</li>
+			<li>Liz Borges-Herzog</li>
+			<li>Ronnie Del Carmen</li>
+			<li>Walt Dohrn</li>
+			<li>Craig Edelblut</li>
+			<li>Thor Freudenthal</li>
+			<li>Sarah Maria Goodwin</li>
+			<li>Dalton Grant</li>
+			<li>Hamish Grieve</li>
+			<li>Kory Heinzen</li>
+			<li>Tom Hester</li>
+			<li>Ruben Hickman</li>
+			<li>Raman Hui</li>
+			<li>Yoriko Ito</li>
+			<li>Shannon Jeffries</li>
+			<li>Christopher Jenkins</li>
+			<li>Noah Klocek</li>
+			<li>Travis Koller</li>
+			<li>Robert Koo</li>
+			<li>Piet Kroon</li>
+			<li>David Lux</li>
+			<li>Robert MacKenzie</li>
+			<li>Erwin Madrid</li>
+			<li>Mike Mitchell</li>
+			<li>Huy Nguyen</li>
+			<li>Mark O'Hare</li>
+			<li>Doug Pierce</li>
+			<li>Robert Porter</li>
+			<li>Alexandre Puvilland</li>
+			<li>Christian Schellewald</li>
+			<li>David P. Smith</li>
+			<li>Jeff Snow</li>
+			<li>John Stevenson</li>
+			<li>Henrik Tamm</li>
+			<li>Stacey Vandermeer</li>
+			<li>Jo Watanabe</li>
+			<li>Simon Wells</li>
+			<li>Paul Westacott</li>
+			<li>James Wood Wilson</li>
+			<li>Julia Woolf</li>
+			<li>Darci Zalvin</li>
+			<li>Peter Zaslav</li>
+			<li>Damon Bard</li>
+			<li>Rejean Bourdages</li>
+			<li>Lorna Cook</li>
+			<li>Jenny Lerew</li>
+			<li>Jason Lethcoe</li>
+			<li>Tom McGrath</li>
+			<li>Clay Morrow</li>
+			<li>Jerry Rees</li>
+			<li>Daniel St. Pierre</li>
+			<li>Shane Zalvin</li>
+		</ul>
+	<div class="wax-seal"></div>
+</div>
+<div class="scroll-container">
+    <h2>Masters of the Magic Noise</h2>
+    <ul>
+		<li class="full-width"><strong>Sound Department</strong></li>
+			<li>Christopher Barron</li>
+			<li>Anna Behlmer</li>
+			<li>Tim Burby</li>
+			<li>Derek Casari</li>
+			<li>John Countryman</li>
+			<li>Travis Crenshaw</li>
+			<li>Edwin Dunkley</li>
+			<li>Coya Elliott</li>
+			<li>Andre Fenley</li>
+			<li>Will Files</li>
+			<li>Megan Fouts</li>
+			<li>Jonathan Greber</li>
+			<li>J.R. Grubbs</li>
+			<li>Scott Guitteau</li>
+			<li>Craig Heath</li>
+			<li>Ellen Heuer</li>
+			<li>David C. Hughes</li>
+			<li>David Hunter</li>
+			<li>Leilani Jones</li>
+			<li>Mike Lane</li>
+			<li>Dennis Leonard</li>
+			<li>David Lucarelli</li>
+			<li>Marilyn McCoppen</li>
+			<li>Stuart McCowan</li>
+			<li>Frank 'Pepe' Merel</li>
+			<li>Andy Nelson</li>
+			<li>Gordon Ng</li>
+			<li>Jon Null</li>
+			<li>Larry Oatfield</li>
+			<li>Eva Porter</li>
+			<li>Robert Renga</li>
+			<li>Charleen Richards</li>
+			<li>Carlos Sotolongo</li>
+			<li>Denis St. Amand</li>
+			<li>Ewa Sztompke</li>
+			<li>Randy Thom</li>
+			<li>Dennie Thorpe</li>
+			<li>John Torrijos</li>
+			<li>Jana Vance</li>
+			<li>Larry Winer</li>
+			<li>Ryeland Allison</li>
+			<li>Scott Cochran</li>
+			<li>Will Edwards</li>
+			<li>Mark Kenna</li>
+			<li>Greg LaPlante</li>
+			<li>Timmy Olmstead</li>
+			<li>Hassan Ramli</li>
+			<li>Jon Vogl</li>
+		</ul>
+	<div class="wax-seal"></div>
+</div>
+		<div class="scroll-container">
+    <h2>Artisans of Enchantment</h2>
+    <ul> <li class="full-width"><strong>Special Effects</strong></li>
+			<li>Dennis Gordon</li>
+			<li>Tim Lawrence</li>
+			<li>Charles Rivera</li>
+		</ul>
+			<div class="wax-seal"></div>
+</div>
+<div class="scroll-container">
+    <h2>Wizards of the Visuals</h2>
+    <ul> <li class="full-width"><strong>Visual Effects</strong></li>
+			<li>David Aguirre</li>
+			<li>Matt Akey</li>
+			<li>Ryan Albertson</li>
+			<li>Julius F. Alexander</li>
+			<li>Troy Alexiadis</li>
+			<li>David P. Allen</li>
+			<li>Patrick L. Almanza</li>
+			<li>Juan Alvarez</li>
+			<li>Claudia Amatulli</li>
+			<li>Mitch Amino</li>
+			<li>Mitchell Amino</li>
+			<li>John Paul Amos</li>
+			<li>David Anderson</li>
+			<li>Ken Anderson</li>
+			<li>Francois Antoine</li>
+			<li>Sabrina Arnold</li>
+			<li>Matt Aspbury</li>
+			<li>Andrew Astengo</li>
+			<li>Sheryl Aterrado</li>
+			<li>Matt Authement</li>
+			<li>Matt Baer</li>
+			<li>Stephen Bailey</li>
+			<li>Kristopher Baldwin</li>
+			<li>Ken Ball</li>
+			<li>Brad Banda</li>
+			<li>Zsoka Barkacs</li>
+			<li>Richard N. Barnes</li>
+			<li>Jim Barnett</li>
+			<li>Shawn Barnett</li>
+			<li>Abraham Barrera</li>
+			<li>Scott E. Baxter</li>
+			<li>Nathan Behmlander</li>
+			<li>Stephanie Bell</li>
+			<li>Steve R.J. Bell</li>
+			<li>Kate Bello</li>
+			<li>Molly Bender</li>
+			<li>Kevin Bennett</li>
+			<li>Tyler Bennink</li>
+			<li>Ken Bielenberg</li>
+			<li>Stewart Birnam</li>
+			<li>Chris Bloom</li>
+			<li>Patty Bonfilio</li>
+			<li>Jason Bowers</li>
+			<li>Terran Boylan</li>
+			<li>John Bradley</li>
+			<li>Erik Bratlien</li>
+			<li>John Braunreuther</li>
+			<li>Anne Marie Breedlove</li>
+			<li>Morris Brown</li>
+			<li>George Bruder</li>
+			<li>Amy Brunolli</li>
+			<li>James Buckhouse</li>
+			<li>Jared Buford</li>
+			<li>Juan J. Buhler</li>
+			<li>Chris Bunny</li>
+			<li>Ted Burge</li>
+			<li>Robert Burk</li>
+			<li>Patti Burke</li>
+			<li>Markus Burki</li>
+			<li>David Caeiro Cebrián</li>
+			<li>Jay Caguioa</li>
+			<li>Khue Cai</li>
+			<li>Sean Callahan</li>
+			<li>Roberto Calvo</li>
+			<li>Wendy Berry Campbell</li>
+			<li>Claudia Candia</li>
+			<li>Matt Candido</li>
+			<li>Jan Carlee</li>
+			<li>Lans Carstensen</li>
+			<li>Nhi H. Casey</li>
+			<li>Rex Cataroja</li>
+			<li>Gabriel D. Cervantes</li>
+			<li>Craig Cesareo</li>
+			<li>Jeffrey D. Chandler</li>
+			<li>Alan Chen</li>
+			<li>Teresa Cheng</li>
+			<li>Mark Chernausek</li>
+			<li>Adam Chin</li>
+			<li>Jennifer Cho</li>
+			<li>Ye Won Cho</li>
+			<li>Amy Christensen</li>
+			<li>August Christman</li>
+			<li>Kristy Chrobak</li>
+			<li>Richard Chuang</li>
+			<li>Vincent Chung</li>
+			<li>Caleb Cleveland</li>
+			<li>Ryan Cleveland</li>
+			<li>Christine Clippinger</li>
+			<li>Ron Clowney</li>
+			<li>Joshua E. Cohen</li>
+			<li>Michael Collery</li>
+			<li>Joseph Costa</li>
+			<li>Laurel Costa</li>
+			<li>Sean Crampton</li>
+			<li>John Crawbuck</li>
+			<li>Thomas Crow</li>
+			<li>Chanda Cummings</li>
+			<li>Lawrence D. Cutler</li>
+			<li>Michael Cutler</li>
+			<li>Brian J. Danker</li>
+			<li>Rikk Davis</li>
+			<li>Gilbert Davoud</li>
+			<li>Daniel Dawson</li>
+			<li>Michael Day</li>
+			<li>Alain De Hoe</li>
+			<li>Andre de Oliviera Araujo</li>
+			<li>Brian Deans-Rowe</li>
+			<li>Josh Deason</li>
+			<li>Mark A. Decker</li>
+			<li>Philippe Denis</li>
+			<li>Del DePierro</li>
+			<li>Edward Deren</li>
+			<li>Jonathon Dickey</li>
+			<li>Stephen Dobbs</li>
+			<li>John Koren Dodelson</li>
+			<li>David Doepp</li>
+			<li>Jennifer Dolan</li>
+			<li>Rene Dominguez</li>
+			<li>Fred Dossola</li>
+			<li>Fleur Diana Dragan</li>
+			<li>Tom Driscoll</li>
+			<li>Anthony Dunifer</li>
+			<li>Vanessa Antoinette Dunn</li>
+			<li>Holly Edwards</li>
+			<li>Randahl Elkins</li>
+			<li>Angela Ensele</li>
+			<li>Monika Erande</li>
+			<li>Susan Erokan</li>
+			<li>John Paul Escobar</li>
+			<li>Mark Philip Escobar</li>
+			<li>Dan Eues</li>
+			<li>Duane Eues</li>
+			<li>Daniel Evans</li>
+			<li>Paul John Faeldo</li>
+			<li>Peter Farson</li>
+			<li>Daniel Fazel</li>
+			<li>Justin Fecteau</li>
+			<li>Alison Fedrick</li>
+			<li>Dado Feigenblatt</li>
+			<li>Phylicia Feldman</li>
+			<li>Eric Fernandes</li>
+			<li>Antony Field</li>
+			<li>Rodney Figueroa</li>
+			<li>Oliver Finkelde</li>
+			<li>Benjamin Fischler</li>
+			<li>Marc Fleury</li>
+			<li>Aaron Florez</li>
+			<li>Chris M. Flynn
+</li>
+			<li>Nathan Fok</li>
+			<li>Nick Foster</li>
+			<li>Emmanuel 'Manny' Francisco</li>
+			<li>Kiki Francoise</li>
+			<li>David E. Franks</li>
+			<li>Jennifer Freeman</li>
+			<li>Marilyn Friedman</li>
+			<li>Travis Fruci</li>
+			<li>Napoleon Fulinara Jr.</li>
+			<li>Angus Funkhouser</li>
+			<li>Mayur Gangasagar</li>
+			<li>Christie Gangnath</li>
+			<li>Carlos Garcia</li>
+			<li>Michael Garner</li>
+			<li>Philip R. Garrett</li>
+			<li>Sam Gebhart</li>
+			<li>Adam Ghering</li>
+			<li>Jonathan Gibbs</li>
+			<li>Meredith M. Gill</li>
+			<li>Lloyd Gilyard Jr.</li>
+			<li>Cyrus Jay Gladstone</li>
+			<li>Philippe Gluckman</li>
+			<li>Rick Glumac</li>
+			<li>Walter Gonzalez</li>
+			<li>Philip Gordon</li>
+			<li>Corban Gossett</li>
+			<li>Carrie Grabowski</li>
+			<li>Trevor Graciano</li>
+			<li>Lee Graft</li>
+			<li>Duane Granger</li>
+			<li>Kirk Gravatt</li>
+			<li>Hank Grebe</li>
+			<li>Keith Griego</li>
+			<li>Laura Grieve</li>
+			<li>David Gutierrez</li>
+			<li>Zack Haddad</li>
+			<li>Tony Halawa</li>
+			<li>Miles Hall</li>
+			<li>Randall Hammond</li>
+			<li>Gary Hangen</li>
+			<li>Derek Hanson</li>
+			<li>Ryan Harlow</li>
+			<li>Shizue Harrison</li>
+			<li>David Hart</li>
+			<li>Greg Hart</li>
+			<li>Susan Hayden</li>
+			<li>Jeff Hayes</li>
+			<li>Todd Heapy</li>
+			<li>Kenneth Hébert</li>
+			<li>Earl E. Heinlein Jr.
+</li>
+			<li>Ronald D. Henderson</li>
+			<li>Benjamin Hendricks</li>
+			<li>Laurie Herman</li>
+			<li>Christopher Higginbotham</li>
+			<li>Matt 'Chief' Hightower</li>
+			<li>Travis Hoecker</li>
+			<li>Henrik Holmberg</li>
+			<li>Robert Howard</li>
+			<li>Sherry Yun-Shyan Hsieh</li>
+			<li>Pamela Hu</li>
+			<li>Milana Huang</li>
+			<li>Jane Huizenga</li>
+			<li>Jill Hunt</li>
+			<li>Jacqueline Hutchinson</li>
+			<li>Danny Huynh</li>
+			<li>Ken Imura</li>
+			<li>David Ireland</li>
+			<li>Pasha Ivanov</li>
+			<li>Kelly Jean-Ware</li>
+			<li>Amy Rae Jones</li>
+			<li>Evan Jones</li>
+			<li>Bradley Kaiser</li>
+			<li>Patty Kaku</li>
+			<li>Kaishin Kam</li>
+			<li>Sandy Kao</li>
+			<li>Jeff Kasunic</li>
+			<li>Mark Kauffman</li>
+			<li>Prateek Kaushal</li>
+			<li>Tim Keenan</li>
+			<li>Elaine Kelley</li>
+			<li>Matthew Kemper</li>
+			<li>Brian Ketcham</li>
+			<li>Kavita Khosla</li>
+			<li>Quintin King</li>
+			<li>Mark W. Kirk</li>
+			<li>Daniel Kirksey</li>
+			<li>Annmarie Koenig</li>
+			<li>Lewis Kofsky</li>
+			<li>Keith Kolod</li>
+			<li>Brandon Kolpak</li>
+			<li>Melissa Kolpak</li>
+			<li>Robert Kosai</li>
+			<li>Hans Ku</li>
+			<li>Jeff Kuecken</li>
+			<li>Ed Labao</li>
+			<li>Arnauld Lamorlette</li>
+			<li>Bryan Gregg LaShelle</li>
+			<li>Adam Lauwers</li>
+			<li>Gary Layug</li>
+			<li>Andre LeBlanc</li>
+			<li>Michael H. Lee</li>
+			<li>Shawn Lewis</li>
+			<li>Penny Leyton</li>
+			<li>Davell Lee Libbett</li>
+			<li>Shanna C. Lim</li>
+			<li>Jin Liou</li>
+			<li>Seth Lippman</li>
+			<li>David Lipton</li>
+			<li>Philip K. Livingston Jr</li>
+			<li>Brendan Llave</li>
+			<li>Marc Llorin</li>
+			<li>Chris Longo</li>
+			<li>Anthony Lopez</li>
+			<li>Michael Lopez</li>
+			<li>Amber Stewart Lunderville</li>
+			<li>Tony Luong</li>
+			<li>Raymon Macahilas</li>
+			<li>Celeste Madrigal</li>
+			<li>Jimmy Maidens</li>
+			<li>Adam Stanley Maino</li>
+			<li>Jeffrey Manchester</li>
+			<li>Kim Mandilag</li>
+			<li>Mark Manfrey</li>
+			<li>Michael Mansueto</li>
+			<li>Michael Manza</li>
+			<li>Mardig Mardirossian</li>
+			<li>Tyler Marino</li>
+			<li>Mariette Marinus</li>
+			<li>Josh Marlar</li>
+			<li>Melanie Marlar</li>
+			<li>Andrew Marquez</li>
+			<li>Joseph Marut</li>
+			<li>Tony Masiello</li>
+			<li>Dexter Matias</li>
+			<li>Gerald McAleece III</li>
+			<li>Sean McCarty</li>
+			<li>Kyle McGill</li>
+			<li>Steve McGrath</li>
+			<li>Adam McKee</li>
+			<li>Phil 'Captain 3D' McNally</li>
+			<li>Andrew McPhillips</li>
+			<li>Nol L. Meyer</li>
+			<li>Barbara Meyers</li>
+			<li>Samantha Michel</li>
+			<li>Marc Miller</li>
+			<li>Peter C. Miller</li>
+			<li>Skottie Miller</li>
+			<li>Denise Minter</li>
+			<li>Jonathan Mitchell</li>
+			<li>Tony Mitzelfelt</li>
+			<li>Ryan Miyamoto</li>
+			<li>Ismael Moran</li>
+			<li>Cristian Moras</li>
+			<li>Stephanie Mulqueen</li>
+			<li>Dave Murphy</li>
+			<li>Tomijann Nabors</li>
+			<li>Natasha Nace</li>
+			<li>Gaku Nakatani</li>
+			<li>Renee Nash</li>
+			<li>Charlie Navarro</li>
+			<li>Hector Navarro</li>
+			<li>Mike Navarro</li>
+			<li>Michael Necci</li>
+			<li>Julie Nelson</li>
+			<li>Kenneth Nelson</li>
+			<li>Brian Newlin</li>
+			<li>Jennifer Stephenson Newlin</li>
+			<li>Ronman Yiu Yan Ng</li>
+			<li>David Nix</li>
+			<li>Carol Norton</li>
+			<li>Daniel Patrick O'Brien</li>
+			<li>Rob O'Neill</li>
+			<li>Hannibal P. Odisho</li>
+			<li>Corey Oesch</li>
+			<li>Neil Okamoto</li>
+			<li>Yuko Okumura</li>
+			<li>Justin Onstine</li>
+			<li>William Opdyke</li>
+			<li>Stephan Osterburg</li>
+			<li>Dave Otte</li>
+			<li>Liana Padilla</li>
+			<li>Young Joo Paik</li>
+			<li>Joe Palrang
+l</li>
+			<li>Justin Pangelinan
+</li>
+			<li>Kelly Parker</li>
+			<li>Ryan Parker</li>
+			<li>Matthew Parkhill</li>
+			<li>Jamie Pastor</li>
+			<li>Patricia Pawlak</li>
+			<li>Javier Perez</li>
+			<li>Marco Perez</li>
+			<li>Joshua Perry</li>
+			<li>Drew Perttula</li>
+			<li>Kiana Petersen</li>
+			<li>Scott B. Peterson</li>
+			<li>Sandy Phetchamphone</li>
+			<li>Andrew Pilgrim</li>
+			<li>Tonia Pizzato</li>
+			<li>Cesar Ploneda</li>
+			<li>Erik Ploneda</li>
+			<li>Ipyana Ponder</li>
+			<li>Ellen Poon</li>
+			<li>Gabriel Portnof</li>
+			<li>Lance Powell</li>
+			<li>Luca Prasso</li>
+			<li>James Prola</li>
+			<li>Konstantin Promokhov</li>
+			<li>Peter Provencio</li>
+			<li>Andrew Pungprakearti</li>
+			<li>Ernesto A. Queroz</li>
+			<li>Ryan J. Quinlan</li>
+			<li>Ben Radcliffe</li>
+			<li>Mahesh Ramasubramanian</li>
+			<li>Charlie Ramos</li>
+			<li>Matthew George Rampias</li>
+			<li>Vanitha Rangaraju</li>
+			<li>Tina Rangel</li>
+			<li>Keith Reicher</li>
+			<li>Janet Rentel</li>
+			<li>Stacy Rentel</li>
+			<li>Sabrina Riegel</li>
+			<li>Damon Riesberg</li>
+			<li>Robyn Rindge</li>
+				<li>Agustin Rios</li>
+			<li>Frank Ritlop</li>
+			<li>Eli Rod</li>
+			<li>Kevin Rodgers</li>
+			<li>Milton E. Rodriguez-Rios</li>
+			<li>Kevin Rogers</li>
+			<li>Robert Rossoff</li>
+			<li>Krzysztof Rost</li>
+			<li>Peder Rottiger</li>
+			<li>Marlin Rowley</li>
+			<li>Trina M. Roy</li>
+			<li>Richard F. Rubio</li>
+			<li>Dylan Sanchez</li>
+			<li>Hayyim Sanchez</li>
+			<li>Michael K. Sanders</li>
+			<li>Amy McDonald Sandjideh</li>
+			<li>Daniel Sandoval-Guillen</li>
+			<li>Barry B. Sandrew</li>
+			<li>Jared Sandrew</li>
+			<li>Nico Scapel</li>
+			<li>Adrian Scherger</li>
+			<li>Kristine Schmitt</li>
+			<li>York N. Schueller</li>
+			<li>Bill Seneshen</li>
+			<li>Miguel Sepulveda</li>
+			<li>David Settlow</li>
+			<li>Taylor Shaw</li>
+				<li>Richard Shiba</li>
+			<li>Scott Singer</li>
+			<li>Christopher Sinnott</li>
+			<li>Kris Sison</li>
+			<li>Marty Sixkiller</li>
+			<li>Geri Smith</li>
+			<li>Simon J. Smith</li>
+			<li>Michael Soledad</li>
+			<li>Richard Soledad</li>
+			<li>Jerome Solomon</li>
+			<li>Steffen Sommer</li>
+			<li>Jung Jin Song</li>
+			<li>Claudia Southmartin</li>
+			<li>Carla Sparrow</li>
+			<li>Jana Spotts
+</li>
+			<li>Wayne Stables</li>
+			<li>Bill Stahl</li>
+			<li>Dug Stanat</li>
+			<li>Allen Stetson</li>
+			<li>James Stewart</li>
+			<li>Yesod Stone</li>
+			<li>Andrea Stoops</li>
+			<li>Ian Strelsky</li>
+			<li>Tina Sun</li>
+			<li>Jeremy Swain</li>
+			<li>Josh Swanson</li>
+			<li>Kristen Swift</li>
+				<li>Peter Szewczyk</li>
+			<li>J. Todd Taylor</li>
+			<li>Juan Carlos Teliz-Haro</li>
+			<li>Clint Tennant</li>
+			<li>Joanne Thiel</li>
+			<li>Jenna Grigg Thomas</li>
+			<li>Nicholas Tocco</li>
+			<li>Oscar Torres</li>
+			<li>Marc Toscano</li>
+			<li>Anthony Tovar</li>
+			<li>Ted Trabucco</li>
+			<li>Timothy Tranquill</li>
+			<li>Ryan Trenhaile</li>
+			<li>Dan Trezise</li>
+			<li>Martin Usiak</li>
+			<li>David Patrick Valera</li>
+			<li>Pablo Valle</li>
+			<li>Carrie VanEtten</li>
+			<li>Dana Vanhove</li>
+			<li>Santiago Vasquez</li>
+			<li>Kaye Vassey</li>
+			<li>Allie Vella</li>
+			<li>Nathania Vishnevsky</li>
+			<li>Robert Vogt</li>
+			<li>John Wake</li>
+			<li>Nick Walker</li>
+			<li>Dick Walsh</li>
+				<li>Jason Waltman</li>
+			<li>Heather Davis Wang</li>
+			<li>Xiaolei Wang</li>
+			<li>Loicia Ware</li>
+			<li>Bret Watkins</li>
+			<li>Craig Welsh</li>
+			<li>Craig Wentworth</li>
+			<li>Joshua West</li>
+			<li>Andrew Wheeler</li>
+			<li>Tyler Wheeler</li>
+			<li>Sean White</li>
+			<li>David Whitehead</li>
+			<li>Bob Whitehill</li>
+			<li>Geoff Wilhelm</li>
+			<li>Marc Wilhite</li>
+			<li>Adam Will</li>
+			<li>Aaron Williams</li>
+			<li>Benjamin Williams</li>
+			<li>Darren Williams</li>
+			<li>J. Adam Williams</li>
+			<li>Ryan M. Wilson</li>
+			<li>Kalim Winata</li>
+			<li>Jenny Wolfe-Binder</li>
+			<li>Laura Wood</li>
+			<li>Ron Woods</li>
+			<li>Jennifer Wright</li>
+			<li>Jonathan Wright</li>
+				<li>Gentaro Yamamoto</li>
+			<li>Ken Yao</li>
+			<li>Sunny Ye</li>
+			<li>Christina Yen</li>
+			<li>Emre Yilmaz</li>
+			<li>Doug Yoshida</li>
+			<li>Dennis Yoshii</li>
+			<li>Brian Daniel Young</li>
+			<li>Colin Yu</li>
+			<li>Kaho Albert Yu</li>
+			<li>Douglas Zablocki
+</li>
+			<li>Jorge Zarate Salas</li>
+			<h3>uncredited</h3>
+			<li>Tony Baldridge</li>
+			<li>Damon Bard</li>
+			<li>Jeff Bedrick</li>
+			<li>Jason M. Bergman</li>
+			<li>David Dang</li>
+			<li>Shad Davis</li>
+			<li>Greg Dora</li>
+			<li>Adam J. Dunn</li>
+			<li>Derek Flood</li>
+			<li>Ricardo Guevara</li>
+			<li>Adam Hlavac</li>
+			<li>Bob Homami</li>
+			<li>Yun Geuk Kang</li>
+			<li>Laurent Kermel</li>
+			<li>Otto Lai</li>
+				<li>Samuel P. Larson</li>
+			<li>Juan David Lopez</li>
+			<li>Vincent Niebla</li>
+			<li>Glenn Osgood</li>
+			<li>Sven Pohle</li>
+			<li>Makana Sylva</li>
+			<li>Chris Treichel</li>
+			<li>Vassilios Tsatsis</li>
+			<li>Shraddha Uppu</li>
+			<li>Gerard Van Ommen Kloeke</li>
+			<li>Greg VanZyl</li>
+		</ul>
+	<div class="wax-seal"></div>
+</div>
+		<div class="scroll-container">
+    <h2>The Royal Visionaries</h2>
+    <ul> <li class="full-width"><strong>Camera and Electrical:</strong>Nelson Lee</li>
+		</ul>
+			<div class="wax-seal"></div>
+</div>
+<div class="scroll-container">
+    <h2>The Kingdom’s Recruiters</h2>
+    <ul>
+		<li class="full-width"><strong>Casting Department:</strong></li>
+			<li>Celeste Leger(casting assistant)</li>
+			<li>Mickie McGowan(adr voice casting)</li>
+			<li>Christi Soper(casting associate)</li>
+			<li>Barbara Harris(adr voice casting (uncredited))</li>
+		</ul>
+	<div class="wax-seal"></div>
+</div>	
+		<div class="scroll-container">
+    <h2>The Kingdom’s Citizens</h2>
+    <ul> <li><strong>Full cast &amp; crew</strong> can be found on <a href="https://www.imdb.com/title/tt0298148/fullcredits/">imdb</a></li>
+	</ul>
+			<div class="wax-seal"></div>
+</div>		
+<button onclick="topFunction()" id="backToTop" title="Go to top">↑</button>
+	<footer>
+		<div class="rating"> 
+			<img src="Artboard_1.png" class="Movie_rate" alt="It the rating of the movie">
+		</div>
+			<p>&copy; 2026, Alize Mantilla. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+		</footer>
+	</div>
+<script>
+		let mybutton = document.getElementById("backToTop");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' 
+  });
+}
+	function showQuote(name, quote) {
+    document.getElementById('quote-display').innerHTML = `<strong>${name}:</strong> "${quote}"`;
+}
+	
+</script>
+</body>
+</html>
