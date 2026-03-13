@@ -1,0 +1,489 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Durham Performing Art Center l Alize Mantilla, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+<style>
+main {
+    flex: 1;
+}
+body {
+    margin: 0;
+}
+wrapper  {
+    width: 1366px;
+    margin: auto;
+    display: block;
+}
+section {
+    height: 1024px;
+    text-align: center; 
+}
+h2 {
+    color: #FFFFFF;
+    font-family: "Bodoni Moda", serif;
+    font-size: 64px;
+    margin-top: 0;
+    padding-top: 40px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+}
+	h3{
+		 color: #FFFFFF;
+    font-family: "Bodoni Moda", serif;
+    font-size: 25px;
+	}
+#home {
+    background-image: url(DPAC009.jpg);
+    background-size:cover;
+    background-position: center 0%;
+}
+#media {
+    background-image: url(Interior.jpg);
+    background-size:cover;
+    background-position: center 0%;
+}
+#location {
+    background-image: url(show.jpg);
+    background-size: cover;
+	background-position: center 0%;
+}
+#tickets {
+	height: 800px;
+    background-image: url(DPAC-Exterior.jpg);
+    background-size: cover;
+	background-position: center 0%;
+	background-repeat: no-repeat;
+}
+#gallary{
+	background-image: url(Redwall.jpeg);
+    background-size: cover;
+	background-position: center 0%;
+	background-repeat: no-repeat;	
+	}
+main {
+}
+	.brand-title {
+    color: white;
+    font-family: "Bodoni Moda", serif;
+    font-weight: 900;
+    text-orientation: mixed;
+    font-size: 32px;
+    margin-bottom: 40px;
+    letter-spacing: 4px;
+}
+nav {
+    background-color: black;
+	padding: 30px;
+	font-size: 26px;
+	border-bottom: 4px solid #f1f1f1;
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+	width: 100%;
+	list-style-type: none;
+}
+nav ul li {
+    display: inline-block;
+    padding: 9px;
+    color: #F4F4F4;
+}
+nav li a:hover{
+    color: #EBECE7;
+    background-color: #C5C5C5;
+    width: auto;
+    margin: 20px;
+    height: auto;
+	}
+nav ul li a {
+    display: block;
+  position: relative;
+    padding: 10px 15px; 
+    transition: 0.3s;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Bodoni Moda', serif;
+    text-orientation: mixed;
+}
+.calender {
+    filter: invert(90%) hue-rotate(180deg) brightness(1.1);
+    border: 2px solid white !important;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    transition: 0.5s;
+    align-items: center;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+.calender:hover {
+    filter: invert(0%) hue-rotate(0deg); 
+}
+iframe {
+    display: block;
+    margin: 20px auto;
+	border: none;
+}
+footer {
+    padding: 40px;
+    background-color: #f1f1f1;
+    font-size: 14px;
+    text-align: center;
+}
+p, footer {
+    font-family: 'Bodoni Moda', serif;
+}
+	.box-office {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+    flex-wrap: wrap; 
+}
+.show-card {
+    background: rgba(0,0,0,0.8); 
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    width: 300px;
+    color: white;
+    font-family: 'Bodoni Moda', serif;
+    transition: transform 0.3s ease;
+}
+.show-card:hover {
+    transform: translateY(-10px); 
+    background: rgba(255, 255, 255, 0.2);
+}
+.show-date {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #f1f1f1;
+}
+.show-card h3 {
+    font-size: 28px;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+.show-card p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+.ticket-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.4s;
+}
+.ticket-btn:hover {
+    background-color: #0303B9; 
+    border-color: #0303B9;
+    color: #FFFFFF;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+	letter-spacing: 2px;
+}
+.star-map-container {
+    filter: invert(90%) hue-rotate(180deg);
+    border: 2px solid #252525;
+    transition: 0.5s;
+    line-height: 0;
+    display: inline-block;
+    width: 600px;
+    height: 600px;
+    clip-path: polygon(
+        50% 0%, 
+        61% 35%, 
+        98% 35%, 
+        68% 57%, 
+        79% 91%, 
+        50% 70%, 
+        21% 91%, 
+        32% 57%, 
+        2% 35%, 
+        39% 35%
+    );
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background-color: #4B4848;
+    padding-top: 0px;
+    border-spacing: 0px 0px;
+    margin-top: -59px;
+}
+.star-map-container:hover {
+    filter: invert(0%) hue-rotate(0deg);
+}
+.star-map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.map {
+    display: block;
+    margin: 0 auto;
+}
+.stage-container {
+    position: relative;
+    width: 800px;
+    height: 558px;
+    margin: 40px auto;
+    border: 10px solid #222; 
+    border-image: linear-gradient(to bottom, #444, #111) 1;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+}
+.curtain-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s;
+    cursor: pointer;
+}
+.curtain-overlay span {
+    color: white;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 24px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    border: 1px solid white;
+    padding: 10px 30px;
+}
+.stage-container:hover .curtain-overlay {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+.stage-container .calender {
+    width: 100%;
+    height: 100%;
+    filter: invert(90%) hue-rotate(180deg); 
+    border: none !important;
+}
+.slideshow-container {
+    max-width: 800px;
+	width: 90%;
+	height: 50%;
+    position: relative;
+  	margin: 20px auto;
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+.slideshow-container:hover {
+    filter: grayscale(0%);
+}
+.mySlides {
+    display: none; 
+	width: 80%;
+	height: 50%;
+	justify-content: center;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+.video {
+    border-radius: 4px;
+    border-color: #262525;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    margin-top: 4px;
+}
+.slideshow-container .mySlides.fade img {
+    margin-top: 17px;
+    margin-left: 87px;
+}
+#media .Trans {
+    width: 620px;
+    margin-left: 362px;
+    background-color: rgba(0,0,0,0.8);
+    -webkit-box-shadow: 0px 20px 40px;
+    box-shadow: 0px 20px 40px;
+    height: 350px;
+    border: 10px solid #222;
+    position: relative;
+}
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+</style>
+</head>
+<body>
+<wrapper>
+  <header></header>
+  <main>
+    <section id="tickets">
+      <nav>
+        <div class="brand-title">DPAC</div>
+<ul>
+     <a href="#home">  <li>Home</li></a>
+     <a href="#media"> <li>Media</li></a>
+     <a href="#location">   <li>Location</li></a>
+	 <a href="#tickets">   <li>Tickets</li></a>
+	 <a href="#gallary">   <li>Gallery</li></a>
+  </ul>
+     </nav>
+		<h2>Tickets</h2>
+		<div class="box-office">
+  <div class="show-card">
+    <div class="show-date">OCT 12-14</div>
+    <h3>Wicked</h3>
+    <p>The untold true story of the Witches of Oz.</p>
+    <a href="#" class="ticket-btn">Buy Tickets</a>
+  </div>
+
+  <div class="show-card">
+    <div class="show-date">NOV 05-20</div>
+    <h3>Hamilton</h3>
+    <p>An American Musical about the life of Alexander Hamilton.</p>
+    <a href="#" class="ticket-btn">Buy Tickets</a>
+  </div>
+
+  <div class="show-card">
+    <div class="show-date">DEC 01-15</div>
+    <h3>Les Misérables</h3>
+    <p>A timeless story of passion and redemption.</p>
+    <a href="#" class="ticket-btn">Buy Tickets</a>
+  </div>
+</div>
+    </section>
+    <section id="home">
+      <nav>
+        <div class="brand-title">DPAC</div>
+<ul>
+     <a href="#home">  <li>Home</li></a>
+     <a href="#media"> <li>Media</li></a>
+     <a href="#location">   <li>Location</li></a>
+	 <a href="#tickets">   <li>Tickets</li></a>
+	 <a href="#gallary">   <li>Gallery</li></a>
+  </ul>
+     </nav>
+      <h2>Home</h2>
+		<div class="stage-container">
+  <div class="curtain-overlay">
+    <span>View Schedule</span>
+  </div>
+		<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&showCalendars=0&src=MzVhNmJmNTVhNzFjZDY2OTJhZWMzMTUyNzFlNWJiNGM3YzYyNWJlOWMzODEzMzY5ODRhNzI1ZDM0MzQzNWQ1YkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23f09300" width="800" height="600" scrolling="no" frameborder="0" class="calender" style="border:solid 1px #777"></iframe>
+</div>
+</section>
+	      <section id="media">
+<nav>
+        <div class="brand-title">DPAC</div>
+<ul>
+     <a href="#home">  <li>
+       <src></src>
+       Home</li></a>
+     <a href="#media"> <li>Media</li></a>
+     <a href="#location">   <li>Location</li></a>
+	 <a href="#tickets">   <li>Tickets</li></a>
+	 <a href="#gallary">   <li>Gallery</li></a>
+  </ul>
+     </nav>
+      <h2>Media</h2>
+			  <div class="Trans">
+			    <iframe src="https://www.youtube.com/embed/rPuA441Km6o?si=agFetR3cAe_UQV18" width="560" height="315" frameborder="0" class="video" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		      		      </div>
+			
+</section>
+<section id="location">
+      <nav>
+        <div class="brand-title">DPAC</div>
+<ul>
+     <a href="#home">  <li>Home</li></a>
+     <a href="#media"> <li>Media</li></a>
+     <a href="#location">   <li>Location</li></a>
+	 <a href="#tickets">   <li>Tickets</li></a>
+	 <a href="#gallary">   <li>Gallery</li></a>
+  </ul>
+     </nav>
+      <h2>Location</h2>
+			  <div class="star-map-container">
+			  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3228.1071684254025!2d-78.90476722419832!3d35.99324797248814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ace46c494ce6bb%3A0xc266ae4a60dc2ee7!2sDurham%20Performing%20Arts%20Center!5e0!3m2!1sen!2sus!4v1772212196745!5m2!1sen!2sus" width="600" height="450" class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+  </section>
+	      <section id="gallary">
+	 <nav>
+        <div class="brand-title">DPAC</div>
+<ul>
+     <a href="#home">  <li>Home</li></a>
+     <a href="#media"> <li>Media</li></a>
+     <a href="#location">   <li>Location</li></a>
+	 <a href="#tickets">   <li>Tickets</li></a>
+	 <a href="#gallary">   <li>Gallery</li></a>
+  </ul>
+     </nav>
+	  <h2>Gallery</h2>
+			 <section id="gallery">
+				 <h3>Backstage Murals</h3>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="Chicago-d78c08e078.webp" style="width:100%" alt="Gallary Backstage Art Murals">
+        </div>
+        <div class="mySlides fade">
+            <img src="Donna-Summer-Musical-Mural-44293d6b32.webp" style="width:100%" alt="Gallary Backstage Art Murals">
+        </div>
+        <div class="mySlides fade">
+            <img src="Motown-bc93f4544b.webp" style="width:100%" alt="Gallary Backstage Art Murals">
+        </div>
+		<div class="mySlides fade">
+            <img src="More-Broadway-Murals-Backstage-dd9bd42543.webp" style="width:100%" alt="Gallary Backstage Art Murals">
+        </div>
+		<div class="mySlides fade">
+            <img src="Mary_J_Blige-88cc017684.webp" style="width:100%" alt="Gallary Backstage Art Murals">
+        </div>
+		<div class="mySlides fade">
+            <img src="Jerseu_Boys-df4472cc38.webp" style="width:100%" alt="Gallary Backstage Art Murals">
+        </div>
+		<div class="mySlides fade">
+            <img src="Rent-257a9f7c1d.webp" style="width:100%" alt="Gallary Backstage Art Murals">
+        </div>
+		<div class="mySlides fade">
+            <img src="Something_Rotten-6954d7bb66.webp" style="width:100%" alt="Gallary Backstage Art Murals">
+        </div>
+		<div class="mySlides fade">
+            <img src="Hedwig_and_the_Angry_Inch_Mural-eb567ab3a3.webp" style="width:100%" alt="Gallary Backstage Art Murals">
+        </div>
+        </div>
+</section>
+	  </section>
+  </main>
+  <footer>
+	<p>&copy; 2026, Alize S Mantilla. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+	</footer>
+</wrapper>
+	<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 3000);
+}
+</script>
+</body>
+</html>
