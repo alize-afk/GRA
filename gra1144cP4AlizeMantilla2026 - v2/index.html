@@ -13,6 +13,9 @@ main {
 body {
     margin: 0;
 }
+a li img {
+    width: 162px;
+}
 wrapper  {
     width: 1366px;
     margin: auto;
@@ -57,7 +60,7 @@ h2 {
 	background-position: center 0%;
 	background-repeat: no-repeat;
 }
-#gallary{
+#gallery{
 	background-image: url(Redwall.jpeg);
     background-size: cover;
 	background-position: center 0%;
@@ -109,7 +112,7 @@ nav ul li a {
     font-family: 'Bodoni Moda', serif;
     text-orientation: mixed;
 }
-.calender {
+.calendar {
     filter: invert(90%) hue-rotate(180deg) brightness(1.1);
     border: 2px solid white !important;
     border-radius: 8px;
@@ -122,7 +125,7 @@ nav ul li a {
     margin-left: 0px;
 }
 
-.calender:hover {
+.calendar:hover {
     filter: invert(0%) hue-rotate(0deg); 
 }
 iframe {
@@ -187,15 +190,22 @@ p, footer {
     transition: 0.4s;
 }
 .ticket-btn:hover {
-    background-color: #0303B9; 
-    border-color: #0303B9;
+    background-color: #DB080C; 
+    border-color: #E90307;
     color: #FFFFFF;
     box-shadow: 0 10px 30px rgba(0,0,0,0.8);
 	letter-spacing: 2px;
+	transform: scale(1.05);
 }
+	.star-map-under{
+	width: 680px;
+    height: 680px;
+	color:black;
+		clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    filter: invert(90%) hue-rotate(180deg) drop-shadow(0 0 5px #444);
+	}
 .star-map-container {
     filter: invert(90%) hue-rotate(180deg);
-    border: 2px solid #252525;
     transition: 0.5s;
     line-height: 0;
     display: inline-block;
@@ -215,11 +225,7 @@ p, footer {
     );
     overflow: hidden;
     position: relative;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     background-color: #4B4848;
-    padding-top: 0px;
-    border-spacing: 0px 0px;
-    margin-top: -59px;
 }
 .star-map-container:hover {
     filter: invert(0%) hue-rotate(0deg);
@@ -227,7 +233,6 @@ p, footer {
 .star-map-container iframe {
     width: 100%;
     height: 100%;
-    border: none;
 }
 .map {
     display: block;
@@ -278,12 +283,11 @@ p, footer {
 }
 .slideshow-container {
     max-width: 800px;
-	width: 90%;
+	width: 100%;
 	height: 50%;
     position: relative;
   	margin: 20px auto;
-    border: 5px solid white;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+   border: none;
 }
 .slideshow-container:hover {
     filter: grayscale(0%);
@@ -332,13 +336,12 @@ p, footer {
   <main>
     <section id="tickets">
       <nav>
-        <div class="brand-title">DPAC</div>
+             <div class="brand-title"><a href="#home">DPAC</a></div>
 <ul>
-     <a href="#home">  <li>Home</li></a>
      <a href="#media"> <li>Media</li></a>
      <a href="#location">   <li>Location</li></a>
 	 <a href="#tickets">   <li>Tickets</li></a>
-	 <a href="#gallary">   <li>Gallery</li></a>
+	 <a href="#gallery">   <li>Gallery</li></a>
   </ul>
      </nav>
 		<h2>Tickets</h2>
@@ -367,13 +370,12 @@ p, footer {
     </section>
     <section id="home">
       <nav>
-        <div class="brand-title">DPAC</div>
+          <div class="brand-title"><a href="#home">DPAC</a></div>
 <ul>
-     <a href="#home">  <li>Home</li></a>
      <a href="#media"> <li>Media</li></a>
      <a href="#location">   <li>Location</li></a>
 	 <a href="#tickets">   <li>Tickets</li></a>
-	 <a href="#gallary">   <li>Gallery</li></a>
+	 <a href="#gallery">   <li>Gallery</li></a>
   </ul>
      </nav>
       <h2>Home</h2>
@@ -381,58 +383,56 @@ p, footer {
   <div class="curtain-overlay">
     <span>View Schedule</span>
   </div>
-		<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&showCalendars=0&src=MzVhNmJmNTVhNzFjZDY2OTJhZWMzMTUyNzFlNWJiNGM3YzYyNWJlOWMzODEzMzY5ODRhNzI1ZDM0MzQzNWQ1YkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23f09300" width="800" height="600" scrolling="no" frameborder="0" class="calender" style="border:solid 1px #777"></iframe>
+		<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&showCalendars=0&src=MzVhNmJmNTVhNzFjZDY2OTJhZWMzMTUyNzFlNWJiNGM3YzYyNWJlOWMzODEzMzY5ODRhNzI1ZDM0MzQzNWQ1YkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23f09300" width="800" height="600" scrolling="no" frameborder="0" class="calendar" style="border:solid 1px #777"></iframe>
 </div>
 </section>
 	      <section id="media">
-<nav>
-        <div class="brand-title">DPAC</div>
+ <nav>
+            <div class="brand-title"><a href="#home">DPAC</a></div>
 <ul>
-     <a href="#home">  <li>
-       <src></src>
-       Home</li></a>
      <a href="#media"> <li>Media</li></a>
      <a href="#location">   <li>Location</li></a>
 	 <a href="#tickets">   <li>Tickets</li></a>
-	 <a href="#gallary">   <li>Gallery</li></a>
+	 <a href="#gallery">   <li>Gallery</li></a>
   </ul>
      </nav>
       <h2>Media</h2>
 			  <div class="Trans">
 			    <iframe src="https://www.youtube.com/embed/rPuA441Km6o?si=agFetR3cAe_UQV18" width="560" height="315" frameborder="0" class="video" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 		      		      </div>
-			
 </section>
 <section id="location">
-      <nav>
-        <div class="brand-title">DPAC</div>
+ <nav>
+        <div class="brand-title"><a href="#home">DPAC</a></div>
 <ul>
-     <a href="#home">  <li>Home</li></a>
      <a href="#media"> <li>Media</li></a>
      <a href="#location">   <li>Location</li></a>
 	 <a href="#tickets">   <li>Tickets</li></a>
-	 <a href="#gallary">   <li>Gallery</li></a>
+	 <a href="#gallery">   <li>Gallery</li></a>
   </ul>
      </nav>
       <h2>Location</h2>
+	<div class="star-map-under">
 			  <div class="star-map-container">
 			  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3228.1071684254025!2d-78.90476722419832!3d35.99324797248814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ace46c494ce6bb%3A0xc266ae4a60dc2ee7!2sDurham%20Performing%20Arts%20Center!5e0!3m2!1sen!2sus!4v1772212196745!5m2!1sen!2sus" width="600" height="450" class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
+	</div>
   </section>
-	      <section id="gallary">
-	 <nav>
-        <div class="brand-title">DPAC</div>
+	      <section id="gallery">
+ <nav>
+        <div class="brand-title"><a href="#home">DPAC</a></div>
 <ul>
-     <a href="#home">  <li>Home</li></a>
      <a href="#media"> <li>Media</li></a>
      <a href="#location">   <li>Location</li></a>
 	 <a href="#tickets">   <li>Tickets</li></a>
-	 <a href="#gallary">   <li>Gallery</li></a>
+	 <a href="#gallery">   <li>Gallery</li></a>
   </ul>
      </nav>
 	  <h2>Gallery</h2>
-			 <section id="gallery">
-				 <h3>Backstage Murals</h3>
+			  <div class="stage-container">
+        <div class="curtain-overlay">
+            <span>Enter Gallery</span>
+        </div>
     <div class="slideshow-container">
         <div class="mySlides fade">
             <img src="Chicago-d78c08e078.webp" style="width:100%" alt="Gallary Backstage Art Murals">
@@ -461,9 +461,9 @@ p, footer {
 		<div class="mySlides fade">
             <img src="Hedwig_and_the_Angry_Inch_Mural-eb567ab3a3.webp" style="width:100%" alt="Gallary Backstage Art Murals">
         </div>
+				  </div>
         </div>
 </section>
-	  </section>
   </main>
   <footer>
 	<p>&copy; 2026, Alize S Mantilla. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
