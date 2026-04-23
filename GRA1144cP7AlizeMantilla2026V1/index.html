@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>TravelRose | Alize Mantilla | 2026</title>
+<script src="https://kit.fontawesome.com/44991b8944.js" crossorigin="anonymous"></script>
+<style type="text/css">
+body {
+    width: 1366px;
+    height: 100vh;
+    margin: 0;
+    background-image: url(AdobeStock_308471636.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #F7BEC0;
+    background-position: 0% 208%;
+}
+wrapper {
+    width: 1366px;
+    margin: auto;
+    display: block;
+}
+header {
+    background-color: #FBC4CA;
+    height: 100px;
+}
+#Tabs ul {
+    background-image: none;
+    border: none;
+    background-color: transparent;
+}
+#tabs-1 {
+}
+#Tabs {
+    background-color: rgba(255,255,255,0.50);
+}
+h1 {
+    color: rgba(255,255,255,1.00);
+    text-align: center;
+}
+.tab1b {
+	display:grid;
+	grid-template-columns: 18% 18% 18% 18% 18% 10%; 
+}
+</style>
+<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.tabs.min.css" rel="stylesheet" type="text/css">
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<script src="jQueryAssets/jquery.ui-1.10.4.tabs.min.js"></script>
+</head>
+
+<body>
+<header>
+  <wrapper></wrapper>
+  <h1>TravelRose</h1>
+&nbsp;</header>
+<wrapper>
+  <div id="Tabs">
+    <ul>
+      <li><a href="#tabs-1"><i class="fa-solid fa-plane-arrival"></i><br>
+Flights </a></li>
+<li><a href="#tabs-2"><i class="fa-solid fa-bed"></i><br>Hotels</a></li>
+<li><a href="#tabs-3"><i class="fa-solid fa-car-side"></i><br>
+Rentals</a></li>
+<li><a href="#tabs-4"><i class="fa-solid fa-parachute-box"></i><br>
+Packages</a></li>
+<li><a href="#tabs-5"><i class="fa-solid fa-person-skating"></i><br>
+Activities</a></li>
+    </ul>
+    <div id="tabs-1">
+      <p>Find your Flights</p>
+      <div class="tab1b">
+        <input type="text" placeholder="Leaving From">
+        <input type="text" placeholder="Going To">
+        <input type="date">
+        <input type="date">
+        <select>
+          <option value="0">Number of travelers</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          </select>
+        <input type="text" value="search">
+      </div>
+    </div>
+<div id="tabs-2">
+      <p>Find your Hotels</p>
+    </div>
+<div id="tabs-3">
+  <p>Find your Car Rental</p>
+</div>
+<div id="tabs-4">
+  <p>Bundle and Save</p>
+</div>
+<div id="tabs-5">
+  <p>Find things to do</p>
+</div>
+  </div>
+</wrapper>
+<script type="text/javascript">
+$(function() {
+	$( "#Tabs" ).tabs(); 
+});
+</script>
+</body> 
+</html>
