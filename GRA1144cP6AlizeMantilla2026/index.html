@@ -9,29 +9,36 @@
 <style type="text/css">
 body {
     margin: 0;
-    background-color: #000000;
+    background-color: #CAF0FE;
 }
 wrapper {
     width: 1366px;
     margin: auto;
     display: block;
-    background-color: #000000;
+    background-color: #C8EFFD;
     border: 20px double white;
-	overflow: hidden;
-}
-header {
-}
-main {
+    overflow: hidden;
 }
 footer {
-}
-nav {
-}
-h1 {
+    padding-top: 33px;
+    padding-right: 33px;
+    padding-bottom: 33px;
+    padding-left: 33px;
+    background-color: #A9E8FF;
     color: #FFFFFF;
 }
+	h1{
+    color: #FFFFFF;
+    padding-top: 1px;
+    padding-right: 1px;
+    padding-bottom: 1px;
+    padding-left: 28px;
+    font-style: italic;
+    text-align: center;
+    font-size: 59px;
+}
 p {
-    color: #FFFCFC;
+    color: #00BBFF;
 }
 button {
     width: 50px;
@@ -41,23 +48,34 @@ button {
     margin-bottom: 10px;
     border: medium solid white;
     margin-left: 10px;
+	cursor: pointer;
+    transition: transform 0.2s;
 }
 button:hover {
     border: medium solid #FFD300;
 }
 .product {
     position: relative;
-}
-nav {
+	height: 800px;
 }
 .product img {
-    width: 70%;
-    height: 70%;
+    width: 99%;
+    height: 99%;
     position: absolute;
     top: 0px;
     left: 0px;
+    display: block;
+    visibility: hidden;
+    border: 14px double #FFFFFF;
+}
+#burgundydress {
+    visibility: visible;
 }
 .description {
+    padding-left: 24px;
+    padding-top: 17px;
+    padding-right: 24px;
+    padding-bottom: 17px;
 }
 section {
     display: inline-block;
@@ -80,17 +98,19 @@ li {
 }
 h2 {
     color: #FFFFFF;
+    background-color: #A0E6FF;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
 }
 li, p, ul, h2, h3, h4 {
 	font-family: "Cormorant Garamond", serif;
     color: #FFFFFF;
 }
-#navybluedress, #emeralddress {
-    visibility: hidden;
-}
 	.purchase-actions {
     display: flex;
-    gap: 10px; /* Space between the heart and the button */
+    gap: 10px; 
     margin: 20px 0;
 }
 
@@ -103,14 +123,14 @@ li, p, ul, h2, h3, h4 {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    margin: 0; /* Overrides your general button margin */
+    margin: 0;
 }
 
 .add-to-bag-btn {
-    flex-grow: 1; /* Makes this button fill the rest of the row */
+    flex-grow: 1;
     height: 60px;
-    background-color: #FFFFFF; /* High contrast white button */
-    color: #000000; /* Black text for the button */
+    background-color: #FFFFFF; 
+    color: #000000; 
     font-family: "Cormorant Garamond", serif;
     font-size: 1.2rem;
     font-weight: bold;
@@ -121,8 +141,16 @@ li, p, ul, h2, h3, h4 {
 }
 
 .add-to-bag-btn:hover {
-    background-color: #e0e0e0; /* Subtle grey on hover */
-    border: none; /* Keeps it clean compared to your other buttons */
+    background-color: #e0e0e0;
+    border: none;
+}
+.price {
+    font-size: 2rem;
+    color: #00487B;
+    margin: 10px 0;
+}
+.description .idea {
+    font-size: 24px;
 }
 </style>
 <script type="text/javascript">
@@ -171,11 +199,14 @@ function MM_showHideLayers() { //v9.0
     <section class="description">
       <h2>A-Line Off Shoulder Sweep Train Satin Burgundy Long Prom Dress</h2>
 <button id="ab" onClick="MM_showHideLayers('burgundydress','','show','navybluedress','','hide','emeralddress','','hide')"></button>
+
 <button id="abc" onClick="MM_showHideLayers('burgundydress','','hide','navybluedress','','show','emeralddress','','hide')"></button>
+
 <button id="abcd" onClick="MM_showHideLayers('burgundydress','','hide','navybluedress','','hide','emeralddress','','show')"></button>
+<div class="idea">
 <p>Item Descriptions:
   <ul>
-  <li>Product Code: shop1959</li>
+  <li>Product Code: ROSE5568</li>
    <li>Silhouette: A-Line</li>
    <li>Length: Sweep Train</li>
    <li>Fabric: Satin</li>
@@ -196,7 +227,8 @@ function MM_showHideLayers() { //v9.0
    <li>Height: ___cm/inch</li>
 </ul>
 </p>
-<h3>$182.00</h3>
+</div>
+<h3 class="price">$182.00</h3>
 	  <div class="purchase-actions">
   <button class="wishlist-btn">
     <img src="heart-icon.png" alt="Wishlist"> </button>
