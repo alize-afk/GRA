@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alize Mantilla | Graphic Designer & Creative Developer</title>
+ 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#F5F1E6',
+                        marigold: '#EBA033',
+                        terracotta: '#EF6B31',
+                        terracottaDark: '#D95218',
+                        charcoalText: '#2D2825',
+                    },
+                    fontFamily: {
+                        display: ['"Akaya Telivigala"', 'cursive', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-12px) rotate(2deg)' },
+                        },
+                        swimSlow: {
+                            '0%, 100%': { transform: 'translate(0px, 0px) rotate(0deg)' },
+                            '25%': { transform: 'translate(15px, -15px) rotate(5deg)' },
+                            '50%': { transform: 'translate(25px, 5px) rotate(-2deg)' },
+                            '75%': { transform: 'translate(8px, 15px) rotate(3deg)' },
+                        },
+                        ripple: {
+                            '0%': { transform: 'scale(0.8)', opacity: '0.8' },
+                            '100%': { transform: 'scale(1.8)', opacity: '0' },
+                        }
+                    },
+                    animation: {
+                        floating: 'float 5s ease-in-out infinite',
+                        swimming: 'swimSlow 12s ease-in-out infinite',
+                        rippleEffect: 'ripple 3s cubic-bezier(0, 0.2, 0.8, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F5F1E6;
+            color: #2D2825;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .akaya-font {
+            font-family: 'Akaya Telivigala', cursive;
+        }
+
+      
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F5F1E6;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #EBA033;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #EF6B31;
+        }
+
+      
+        .ripple-bg {
+            position: relative;
+        }
+        .ripple-bg::before {
+            content: '';
+            position: absolute;
+            inset: -10px;
+            border: 2px solid #EBA033;
+            border-radius: 50%;
+            animation: ripple 3s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="relative">
+
+    
+    <header class="fixed top-4 left-0 right-0 z-50 flex justify-center px-4">
+        <nav class="bg-terracotta/95 backdrop-blur-md text-cream px-5 py-2.5 rounded-full shadow-lg border-2 border-marigold/40 flex items-center justify-between w-full max-w-3xl transition-all duration-300">
+         
+            <a href="#hero" class="flex items-center gap-3 group">
+      
+                <span class="font-display font-medium text-lg hidden sm:inline text-cream group-hover:text-marigold transition-colors tracking-wide">Alize Mantilla</span>
+            </a>
+
+            <ul class="flex items-center space-x-3 sm:space-x-6 font-display text-sm sm:text-base font-medium">
+                <li><a href="#about" class="hover:text-marigold transition-colors py-1 px-2 rounded-lg">About</a></li>
+                <li><a href="#projects" class="hover:text-marigold transition-colors py-1 px-2 rounded-lg">Work</a></li>
+                <li><a href="#credentials" class="hover:text-marigold transition-colors py-1 px-2 rounded-lg">Certifications</a></li>
+                <li><a href="#contact" class="hover:text-marigold transition-colors py-1 px-2 rounded-lg">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    
+    <section id="hero" class="min-h-screen pt-28 pb-16 px-4 flex flex-col justify-center items-center relative overflow-hidden">
+  
+        <div class="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-marigold/20 to-transparent -z-10 pointer-events-none"></div>
+
+
+   
+        <div class="max-w-3xl w-full text-center relative z-10 flex flex-col items-center">
+            
+     
+            <div class="relative mb-8 animate-floating">
+                <div class="w-80 sm:w-96 h-44 sm:h-52 bg-terracotta rounded-3xl p-4 border-4 border-marigold shadow-2xl relative z-10 flex items-center justify-center overflow-hidden">
+             <a href="index.html">
+					<img src="logo.jpg" alt="My Logo" Width="200" height="60"></a>
+                </div>
+            </div>
+
+   
+            <span class="inline-block bg-marigold/30 text-terracottaDark font-display font-semibold text-base sm:text-lg px-5 py-1.5 rounded-full mb-3 border border-marigold/40 tracking-wide uppercase">
+                Creative Portfolio
+            </span>
+            <h1 class="font-display text-5xl sm:text-7xl md:text-8xl font-bold text-charcoalText mb-3 leading-tight tracking-wide">
+                Alize Mantilla
+            </h1>
+            <p class="font-body text-base sm:text-xl text-charcoalText/80 max-w-xl mb-8 leading-relaxed font-medium">
+                Graphic Designer & Web Developer 
+          </p>
+
+        
+            <div class="flex flex-wrap gap-4 justify-center items-center">
+                <a href="#projects" class="bg-terracotta hover:bg-terracottaDark text-cream font-display text-lg font-semibold px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 group">
+                    <span>View Selected Work</span>
+                    <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="#contact" class="bg-cream hover:bg-marigold/20 text-terracotta font-display text-lg font-semibold px-8 py-3.5 rounded-full border-2 border-terracotta transition-all duration-300">
+                Contact&nbsp;&nbsp; </a>
+            </div>
+        </div>
+
+
+        <div class="w-full absolute bottom-0 left-0 right-0 overflow-hidden leading-none pointer-events-none">
+            <svg class="relative block w-full h-12 sm:h-20 text-marigold/30" viewBox="0 0 1200 120" preserveAspectRatio="none" fill="currentColor">
+                <path d="M0,0 C150,90 350,-40 500,60 C650,160 900,10 1200,40 L1200,120 L0,120 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 px-4 bg-marigold/10 relative">
+        <div class="max-w-5xl mx-auto">
+        
+            <div class="text-center mb-16">
+                <span class="font-display text-terracotta font-semibold text-base uppercase tracking-wider">[ About Me]</span>
+                <h2 class="font-display text-4xl sm:text-6xl font-bold text-charcoalText mt-1">Who am I?</h2>
+                <div class="w-20 h-1.5 bg-marigold mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+           
+                <div class="md:col-span-7 bg-cream p-8 sm:p-10 rounded-3xl border-2 border-marigold/40 shadow-md relative">
+               
+                    <div class="absolute -top-5 -left-5 w-12 h-12 text-terracotta opacity-80">
+                        <svg viewBox="0 0 100 100" fill="currentColor">
+                            <circle cx="50" cy="50" r="40" fill="#EBA033" opacity="0.3"/>
+                            <path d="M50 10 L55 40 L85 50 L55 60 L50 90 L45 60 L15 50 L45 40 Z"/>
+                        </svg>
+                    </div>
+
+                    <h3 class="font-display text-3xl font-bold text-terracotta mb-3">Hello! I'm Alize</h3>
+                    <p class="text-charcoalText/80 leading-relaxed mb-4">
+                        Passionate graphic designer and web developer who loves experimenting with everything from physical paper cutouts and clay molding to digital media. I am eager to combine my diverse artistic background with technical skills to create engaging, digital, and visual experiences. I specialize in bringing creative concepts to life through print media, photography and more.
+                    </p>
+                    <p class="text-charcoalText/80 leading-relaxed mb-6">
+                        My why?
+                  </p>
+
+
+                    <div class="flex items-center gap-3 pt-2 border-t border-marigold/20">
+                        <span class="font-display text-sm font-semibold text-charcoalText/70">Languages:</span>
+                        <span class="bg-marigold/20 text-terracottaDark text-xs font-semibold px-3 py-1 rounded-full">English (Native)</span>
+                        <span class="bg-marigold/20 text-terracottaDark text-xs font-semibold px-3 py-1 rounded-full">Spanish (spoken proficiency)</span>
+                    </div>
+                </div>
+
+           
+                <div class="md:col-span-5 bg-terracotta text-cream p-8 sm:p-10 rounded-3xl shadow-lg relative overflow-hidden">
+                    <h3 class="font-display text-3xl font-bold text-cream mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-palette text-marigold text-2xl"></i>
+                        Technical Skills
+                    </h3>
+
+                 
+                    <div class="mb-6">
+                        <h4 class="font-display text-sm font-semibold text-marigold uppercase tracking-wider mb-3">Graphic & Brand Design</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-cream/10 border border-cream/20 text-cream text-xs font-medium px-3 py-1.5 rounded-lg">Adobe Illustrator</span>
+                            <span class="bg-cream/10 border border-cream/20 text-cream text-xs font-medium px-3 py-1.5 rounded-lg">Photoshop</span>
+                            <span class="bg-cream/10 border border-cream/20 text-cream text-xs font-medium px-3 py-1.5 rounded-lg">InDesign</span>
+                            <span class="bg-cream/10 border border-cream/20 text-cream text-xs font-medium px-3 py-1.5 rounded-lg">Lightroom&nbsp;</span>
+                            <span class="bg-cream/10 border border-cream/20 text-cream text-xs font-medium px-3 py-1.5 rounded-lg">Dreamweaver&nbsp;</span>
+                        </div>
+                    </div>
+
+             
+                    <div>
+                        <h4 class="font-display text-sm font-semibold text-marigold uppercase tracking-wider mb-3">Web & Digital Development</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-cream/10 border border-cream/20 text-cream text-xs font-medium px-3 py-1.5 rounded-lg">HTML5 / CSS3</span>
+                            <span class="bg-cream/10 border border-cream/20 text-cream text-xs font-medium px-3 py-1.5 rounded-lg">Tailwind CSS&nbsp;</span>
+                          
+                   
+                            <span class="bg-cream/10 border border-cream/20 text-cream text-xs font-medium px-3 py-1.5 rounded-lg">UI/UX Wireframing</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects" class="py-24 px-4 bg-cream relative">
+        <div class="max-w-6xl mx-auto">
+            
+       
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="font-display text-terracotta font-semibold text-base uppercase tracking-wider">[ Project/Work ]</span>
+                    <h2 class="font-display text-4xl sm:text-6xl font-bold text-charcoalText mt-1">Featured Projects</h2>
+                </div>
+
+            
+                <div class="flex flex-wrap gap-2 mt-6 md:mt-0 font-display text-sm">
+                    <button onclick="filterProjects('all')" class="filter-btn active bg-terracotta text-cream px-5 py-2 rounded-full font-medium shadow-sm transition-all">All Projects</button>
+                    <button onclick="filterProjects('branding')" class="filter-btn bg-cream border border-marigold text-charcoalText hover:bg-marigold/20 px-5 py-2 rounded-full font-medium transition-all">Photography</button>
+                    <button onclick="filterProjects('web')" class="filter-btn bg-cream border border-marigold text-charcoalText hover:bg-marigold/20 px-5 py-2 rounded-full font-medium transition-all">Web Design</button>
+                    <button onclick="filterProjects('illustration')" class="filter-btn bg-cream border border-marigold text-charcoalText hover:bg-marigold/20 px-5 py-2 rounded-full font-medium transition-all">Illustration</button>
+					 <button onclick="filterProjects('illustration')" class="filter-btn bg-cream border border-marigold text-charcoalText hover:bg-marigold/20 px-5 py-2 rounded-full font-medium transition-all">Paper</button>
+                </div>
+            </div>
+
+          
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                
+              
+                <div class="project-card branding bg-cream border-2 border-marigold/30 rounded-3xl overflow-hidden hover:border-terracotta transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl group">
+                    <div class="h-52 bg-terracotta/20 relative overflow-hidden flex items-center justify-center p-6">
+                        <div class="w-full h-full bg-terracotta/80 rounded-2xl flex items-center justify-center text-cream font-display text-3xl font-bold shadow-inner group-hover:scale-105 transition-transform duration-500">
+                        Project&nbsp; </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-terracotta text-sm font-display font-semibold uppercase tracking-wider">Title for type of project</span>
+                        <h3 class="font-display text-2xl font-bold text-charcoalText mt-1 mb-2">Project titles</h3>
+                        <p class="text-charcoalText/70 text-sm mb-4 line-clamp-2">Info</p>
+       
+                            <span>View Details</span>
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+             
+                <div class="project-card web bg-cream border-2 border-marigold/30 rounded-3xl overflow-hidden hover:border-terracotta transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl group">
+                    <div class="h-52 bg-marigold/20 relative overflow-hidden flex items-center justify-center p-6">
+                        <div class="w-full h-full bg-marigold rounded-2xl flex items-center justify-center text-charcoalText font-display text-3xl font-bold shadow-inner group-hover:scale-105 transition-transform duration-500">
+                        Project&nbsp; </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-terracotta text-sm font-display font-semibold uppercase tracking-wider">Title for type of project</span>
+                        <h3 class="font-display text-2xl font-bold text-charcoalText mt-1 mb-2">Food word</h3>
+                        <p class="text-charcoalText/70 text-sm mb-4 line-clamp-2">Info</p
+                            <span>View Details</span>
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-card illustration bg-cream border-2 border-marigold/30 rounded-3xl overflow-hidden hover:border-terracotta transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl group">
+                    <div class="h-52 bg-terracotta/10 relative overflow-hidden flex items-center justify-center p-6">
+                        <div class="w-full h-full bg-terracotta/40 rounded-2xl flex items-center justify-center text-cream font-display text-3xl font-bold shadow-inner group-hover:scale-105 transition-transform duration-500">
+                          Project
+                      </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-terracotta text-sm font-display font-semibold uppercase tracking-wider">Title for type of project</span>
+                        <h3 class="font-display text-2xl font-bold text-charcoalText mt-1 mb-2">Koi Pond Cutout Collection</h3>
+                        <p class="text-charcoalText/70 text-sm mb-4 line-clamp-2">info</p>
+                            <span>View Details</span>
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="credentials" class="py-20 px-4 bg-marigold/10 relative">
+        <div class="max-w-5xl mx-auto">
+            
+            <div class="text-center mb-16">
+                <span class="font-display text-terracotta font-semibold text-base uppercase tracking-wider">[ Background&nbsp; ]</span>
+                <h2 class="font-display text-4xl sm:text-6xl font-bold text-charcoalText mt-1">Certifications & Education</h2>
+                <div class="w-20 h-1.5 bg-marigold mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                
+             
+                <div class="bg-cream p-8 rounded-3xl border-2 border-marigold/40 shadow-sm relative">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-terracotta text-cream rounded-full flex items-center justify-center font-display font-bold">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3 class="font-display text-3xl font-bold text-charcoalText">Certifications</h3>
+                    </div>
+
+                    <ul class="space-y-4">
+                        <li class="p-4 bg-marigold/10 rounded-2xl border border-marigold/30 flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-terracotta mt-1"></i>
+                            <div>
+                                <h4 class="font-display font-bold text-charcoalText text-lg">name</h4>
+                                <p class="text-xs text-charcoalText/70">info</p>
+                            </div>
+                        </li>
+                        <li class="p-4 bg-marigold/10 rounded-2xl border border-marigold/30 flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-terracotta mt-1"></i>
+                            <div>
+                                <h4 class="font-display font-bold text-charcoalText text-lg">name</h4>
+                                <p class="text-xs text-charcoalText/70">info</p>
+                            </div>
+                        </li>
+                        <li class="p-4 bg-marigold/10 rounded-2xl border border-marigold/30 flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-terracotta mt-1"></i>
+                            <div>
+                                <h4 class="font-display font-bold text-charcoalText text-lg">name</h4>
+                                <p class="text-xs text-charcoalText/70">info</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+               
+              <div class="bg-cream p-8 rounded-3xl border-2 border-marigold/40 shadow-sm relative">
+                    <div class="flex items-center gap-3 mb-6">
+                      <div class="w-10 h-10 bg-marigold text-charcoalText rounded-full flex items-center justify-center font-display font-bold">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="font-display text-3xl font-bold text-charcoalText">Education</h3>
+                    </div>
+
+                    <div class="space-y-6 relative border-l-2 border-marigold/40 ml-3 pl-6">
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1 w-3.5 h-3.5 bg-terracotta rounded-full border-2 border-cream"></div>
+                            <span class="text-xs font-display font-semibold text-terracotta">Expected graduation Spring 2027.&nbsp;</span>
+                            <h4 class="font-display font-bold text-charcoalText text-lg">Broward College</h4>
+                            <p class="text-xs text-charcoalText/70 mt-1">Major: AS Graphic Design |GPA: [3.91].</p>
+                            <p class="text-xs text-charcoalText/70 mt-1">Info&nbsp;</p>
+                        </div>
+
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1 w-3.5 h-3.5 bg-marigold rounded-full border-2 border-cream"></div>
+                            <span class="text-xs font-display font-semibold text-terracotta">2024</span>
+                            <h4 class="font-display font-bold text-charcoalText text-lg">Somerset Academy Central Miramar High School</h4>
+                            <p class="text-xs text-charcoalText/70 mt-1">info.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bg-terracotta text-cream p-8 sm:p-10 rounded-3xl shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 border-2 border-marigold">
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 bg-cream/10 rounded-2xl flex items-center justify-center text-marigold text-2xl shrink-0">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display text-3xl font-bold">Need a Detailed Resume?</h3>
+                        <p class="text-cream/80 text-sm">Download my full resume containing detailed project histories and technical specs.</p>
+                    </div>
+                </div>
+                <a href="#contact" onclick="alert('Resum link.')" class="bg-marigold hover:bg-cream text-charcoalText hover:text-terracotta font-display font-bold text-base px-6 py-3.5 rounded-full transition-all duration-300 shrink-0 shadow-md flex items-center gap-2">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Download PDF</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <section id="contact" class="pt-20 pb-12 px-4 bg-terracotta text-cream relative">
+        <div class="w-full absolute top-0 left-0 right-0 overflow-hidden leading-none transform -translate-y-full">
+            <svg class="relative block w-full h-12 sm:h-20 text-terracotta" viewBox="0 0 1200 120" preserveAspectRatio="none" fill="currentColor">
+                <path d="M0,0 C150,90 350,-40 500,60 C650,160 900,10 1200,40 L1200,120 L0,120 Z"></path>
+            </svg>
+        </div>
+
+        <div class="max-w-4xl mx-auto relative z-10">
+            
+            <div class="text-center mb-12">
+                <span class="font-display text-marigold font-semibold text-base uppercase tracking-wider">[ Contact ]</span>
+                <h2 class="font-display text-4xl sm:text-6xl font-bold text-cream mt-1">Let's Work Together</h2>
+                <p class="text-cream/80 text-sm sm:text-base mt-2 max-w-lg mx-auto">info</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                
+               
+                <div class="md:col-span-5 space-y-6">
+                    <div class="bg-cream/10 p-6 rounded-2xl border border-cream/20">
+                        <span class="text-xs font-display text-marigold uppercase tracking-wider">Direct Email</span>
+                        <p class="font-display text-xl font-bold text-cream mt-1">alizesmantilla@gmail.com</p>
+                   
+                        <span class="text-xs font-display text-marigold uppercase tracking-wider">Phone Number</span>
+                        <p class="font-display text-xl font-bold text-cream mt-1">(549-591-4078)</p>
+                    </div>
+
+                    <div class="bg-cream/10 p-6 rounded-2xl border border-cream/20">
+                        <span class="text-xs font-display text-marigold uppercase tracking-wider">Location</span>
+                        <p class="font-display text-xl font-bold text-cream mt-1">Open for Remote Work and office&nbsp;&nbsp;</p>
+                    </div>
+
+                    
+                    <div class="flex items-center gap-4 pt-2">
+                        <a href="#" class="w-11 h-11 bg-cream/10 hover:bg-marigold hover:text-charcoalText text-cream rounded-full flex items-center justify-center transition-all">
+                            <i class="fa-brands fa-linkedin-in text-lg"></i>
+                        </a>
+                        <a href="#" class="w-11 h-11 bg-cream/10 hover:bg-marigold hover:text-charcoalText text-cream rounded-full flex items-center justify-center transition-all">
+                            <i class="fa-brands fa-github text-lg"></i>
+                        </a>
+                        <a href="#" class="w-11 h-11 bg-cream/10 hover:bg-marigold hover:text-charcoalText text-cream rounded-full flex items-center justify-center transition-all">
+                            <i class="fa-brands fa-behance text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+             
+                <form id="contact-form" onsubmit="handleFormSubmit(event)" class="md:col-span-7 bg-cream text-charcoalText p-8 rounded-3xl shadow-xl border-2 border-marigold space-y-4">
+                    <div>
+                        <label class="block font-display text-xs font-bold text-charcoalText uppercase mb-1">Your Name</label>
+                        <input type="text" required placeholder="name" class="w-full bg-cream border-2 border-marigold/40 rounded-xl px-4 py-3 focus:outline-none focus:border-terracotta text-sm">
+                    </div>
+
+                    <div>
+                        <label class="block font-display text-xs font-bold text-charcoalText uppercase mb-1">Email Address</label>
+                        <input type="email" required placeholder="name@example.com" class="w-full bg-cream border-2 border-marigold/40 rounded-xl px-4 py-3 focus:outline-none focus:border-terracotta text-sm">
+                    </div>
+
+                    <div>
+                        <label class="block font-display text-xs font-bold text-charcoalText uppercase mb-1">Message</label>
+                        <textarea rows="4" required placeholder="..." class="w-full bg-cream border-2 border-marigold/40 rounded-xl px-4 py-3 focus:outline-none focus:border-terracotta text-sm"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-terracotta hover:bg-terracottaDark text-cream font-display text-lg font-bold py-3.5 rounded-xl shadow-md transition-all duration-300">
+                        Send Message
+                    </button>
+                    
+                    <div id="form-feedback" class="hidden text-center p-3 bg-marigold/20 text-terracotta font-display text-sm rounded-xl">
+                        Thank you! Your message has been sent.
+                    </div>
+                </form>
+
+            </div>
+
+          
+            <div class="mt-16 pt-8 border-t border-cream/20 flex flex-col sm:flex-row items-center justify-between text-xs text-cream/70 gap-4">
+                <div class="flex items-center gap-2">
+                    <span class="font-display text-base font-bold text-cream">logo&nbsp;</span>
+                    <span>© 2026 Alize Mantilla. All rights reserved.</span>
+                </div>
+                <span>info</span>
+            </div>
+
+        </div>
+    </section>
+
+   
+    <div id="project-modal" class="fixed inset-0 bg-charcoalText/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-cream border-2 border-marigold max-w-xl w-full rounded-3xl p-6 sm:p-8 relative shadow-2xl animate-floating" style="animation-duration: 0.3s;">
+            <button onclick="closeModal()" class="absolute top-4 right-4 w-9 h-9 bg-marigold/20 text-terracotta hover:bg-terracotta hover:text-cream rounded-full flex items-center justify-center font-bold transition-all">
+                ✕
+            </button>
+            <span id="modal-category" class="text-terracotta text-sm font-display font-semibold uppercase tracking-wider">Category</span>
+            <h3 id="modal-title" class="font-display text-3xl font-bold text-charcoalText mt-1 mb-3">Project Title</h3>
+            
+            <div class="mb-4">
+                <span class="block text-xs font-bold text-charcoalText/60 uppercase">Tools & Technologies:</span>
+                <p id="modal-tools" class="font-display text-base font-semibold text-terracotta">Tools list</p>
+            </div>
+
+            <div class="mb-6">
+                <span class="block text-xs font-bold text-charcoalText/60 uppercase mb-1">Project Summary:</span>
+                <p id="modal-desc" class="text-charcoalText/80 text-sm leading-relaxed">Description text goes here...</p>
+            </div>
+
+            <button onclick="closeModal()" class="w-full bg-terracotta text-cream font-display text-lg font-bold py-3 rounded-xl hover:bg-terracottaDark transition-all">
+                Close Preview
+            </button>
+        </div>
+    </div>
+
+   
+    <script>
+       
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-terracotta', 'text-cream');
+                btn.classList.add('bg-cream', 'text-charcoalText');
+            });
+
+            event.currentTarget.classList.remove('bg-cream', 'text-charcoalText');
+            event.currentTarget.classList.add('bg-terracotta', 'text-cream');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+      
+        function openModal(title, category, tools, desc) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-category').innerText = category;
+            document.getElementById('modal-tools').innerText = tools;
+            document.getElementById('modal-desc').innerText = desc;
+            document.getElementById('project-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('project-modal').classList.add('hidden');
+        }
+
+   
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const feedback = document.getElementById('form-feedback');
+            feedback.classList.remove('hidden');
+            event.target.reset();
+            setTimeout(() => {
+                feedback.classList.add('hidden');
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
